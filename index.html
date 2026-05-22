@@ -728,7 +728,59 @@
         justify-content: center;
       }
     }
+
+    .lang-switch {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 1000;
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .lang-switch button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 600;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .lang-switch button:hover {
+      color: var(--text);
+    }
+
+    .lang-switch button.active {
+      background: var(--text);
+      color: #000;
+    }
+
+    @media (max-width: 720px) {
+      .lang-switch {
+        top: 12px;
+        right: 12px;
+        font-size: 10px;
+      }
+      .lang-switch button {
+        padding: 5px 9px;
+      }
+    }
   </style>
+  <script src="assets/i18n.js" defer></script>
 </head>
 <body>
   <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
@@ -736,19 +788,25 @@
   <div class="spotlight"></div>
   <div class="noise"></div>
 
+  <div class="lang-switch" role="group" aria-label="Language switcher">
+    <button type="button" data-lang="pt">PT</button>
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="es">ES</button>
+  </div>
+
   <header class="nav">
     <div class="nav-brand">Davi Yoshio</div>
     <nav class="nav-links">
-      <a href="#intro">Início</a>
-      <a href="#origem">Origem</a>
-      <a href="#operacao">Operação</a>
-      <a href="#lideranca">Liderança</a>
-      <a href="#virada">Virada</a>
-      <a href="#academico">Acadêmico</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#conquistas">Conquistas</a>
-      <a href="#certificados">Certificados</a>
-      <a href="#contato">Contato</a>
+      <a href="#intro" data-i18n="nav.intro">Início</a>
+      <a href="#origem" data-i18n="nav.origem">Origem</a>
+      <a href="#operacao" data-i18n="nav.operacao">Operação</a>
+      <a href="#lideranca" data-i18n="nav.lideranca">Liderança</a>
+      <a href="#virada" data-i18n="nav.virada">Virada</a>
+      <a href="#academico" data-i18n="nav.academico">Acadêmico</a>
+      <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
+      <a href="#conquistas" data-i18n="nav.conquistas">Conquistas</a>
+      <a href="#certificados" data-i18n="nav.certificados">Certificados</a>
+      <a href="#contato" data-i18n="nav.contato">Contato</a>
     </nav>
   </header>
 
@@ -756,19 +814,19 @@
     <section class="slide" id="intro">
       <div class="slide-inner">
         <div class="hero-card reveal">
-          <span class="eyebrow">Portfólio · storytelling profissional</span>
-          <h1>Davi Yoshio</h1>
-          <p class="lead">
+          <span class="eyebrow" data-i18n="intro.eyebrow">Portfólio · storytelling profissional</span>
+          <h1 data-i18n="intro.title">Davi Yoshio</h1>
+          <p class="lead" data-i18n="intro.lead">
             Dados, tecnologia, negócios e execução. Uma trajetória construída da operação ao pensamento estratégico, transformada aqui em uma experiência visual limpa, minimalista e profissional.
           </p>
           <div class="meta-row">
-            <span class="pill">Ciência de Dados & IA</span>
-            <span class="pill">Produto & E-commerce</span>
-            <span class="pill">Análise & Execução</span>
+            <span class="pill" data-i18n="intro.pill1">Ciência de Dados & IA</span>
+            <span class="pill" data-i18n="intro.pill2">Produto & E-commerce</span>
+            <span class="pill" data-i18n="intro.pill3">Análise & Execução</span>
           </div>
           <div class="actions">
-            <a class="button" href="#origem">Explorar trajetória</a>
-            <a class="button" href="#projetos">Ver projetos</a>
+            <a class="button" href="#origem" data-i18n="intro.cta1">Explorar trajetória</a>
+            <a class="button" href="#projetos" data-i18n="intro.cta2">Ver projetos</a>
           </div>
         </div>
 
@@ -776,7 +834,7 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-intro.jpg" alt="Ambiente minimalista de trabalho com foco em tecnologia" />
             <div class="media-overlay"></div>
-            <div class="media-label">Landing page em formato de apresentação</div>
+            <div class="media-label" data-i18n="intro.label">Landing page em formato de apresentação</div>
           </div>
         </div>
       </div>
@@ -786,12 +844,12 @@
       <div class="slide-inner">
         <div class="content reveal">
           <div class="slide-index">01</div>
-          <span class="eyebrow">Capítulo 1</span>
-          <h2>Minha carreira começou antes da tecnologia.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="origem.eyebrow">Capítulo 1</span>
+          <h2 data-i18n="origem.title">Minha carreira começou antes da tecnologia.</h2>
+          <p class="subtitle" data-i18n="origem.body">
             Começou quando eu tinha 15 anos nas vendas. Iniciei empreendendo com produtos high-end e escalei para a importação e venda de travesseiros no meu primeiro e-commerce. Foi nesse período que aprendi, na prática, a dinâmica de colocar a mão na massa e construir resultado desde a base.
           </p>
-          <p class="quote">
+          <p class="quote" data-i18n="origem.quote">
             Antes do código, veio o instinto de negócio. Antes da análise, veio a execução.
           </p>
         </div>
@@ -799,7 +857,7 @@
         <div class="visual reveal">
           <div class="media-frame">
             <img src="assets/img/capitulo-origem.jpg" alt="Ambiente de e-commerce e vendas" />
-            <div class="media-label">Vendas · Empreendedorismo · E-commerce</div>
+            <div class="media-label" data-i18n="origem.label">Vendas · Empreendedorismo · E-commerce</div>
           </div>
         </div>
       </div>
@@ -811,18 +869,18 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-operacao.jpg" alt="Equipe e ambiente corporativo" />
             <div class="media-overlay"></div>
-            <div class="media-label">Bastidores · Rotina empresarial · Aprendizado</div>
+            <div class="media-label" data-i18n="operacao.label">Bastidores · Rotina empresarial · Aprendizado</div>
           </div>
         </div>
 
         <div class="content reveal">
           <div class="slide-index">02</div>
-          <span class="eyebrow">Capítulo 2</span>
-          <h2>Entrar na Yamá foi minha decisão de entender como uma empresa realmente funciona.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="operacao.eyebrow">Capítulo 2</span>
+          <h2 data-i18n="operacao.title">Entrar na Yamá foi minha decisão de entender como uma empresa realmente funciona.</h2>
+          <p class="subtitle" data-i18n="operacao.body1">
             Atuei como Analista em um escritório administrativo da Yamá Cosméticos, mergulhando nas rotinas empresariais. Foi minha escola sobre faturamento, financeiro, logística e sistemas.
           </p>
-          <p class="subtitle" style="margin-top:18px;">
+          <p class="subtitle" style="margin-top:18px;" data-i18n="operacao.body2">
             Mais do que trabalhar em uma área específica, essa fase representou uma escolha estratégica: entender a estrutura de uma empresa por dentro, seus fluxos, suas engrenagens e como diferentes áreas se conectam para gerar resultado.
           </p>
         </div>
@@ -833,12 +891,12 @@
       <div class="slide-inner">
         <div class="content reveal">
           <div class="slide-index">03</div>
-          <span class="eyebrow">Capítulo 3</span>
-          <h2>Depois de aprender a operação, assumi a frente dela.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="lideranca.eyebrow">Capítulo 3</span>
+          <h2 data-i18n="lideranca.title">Depois de aprender a operação, assumi a frente dela.</h2>
+          <p class="subtitle" data-i18n="lideranca.body1">
             Fui convidado para integrar o time de e-commerce com um objetivo claro: aprender. Entrei para entender como uma operação digital funciona em uma empresa de grande porte e participei ativamente da jornada que levou o canal do zero aos R$ 800 mil de faturamento mensal.
           </p>
-          <p class="subtitle" style="margin-top:18px;">
+          <p class="subtitle" style="margin-top:18px;" data-i18n="lideranca.body2">
             No final de 2023, assumi a liderança da operação, passando a conduzir essa estrutura com uma visão mais estratégica sobre processos, crescimento e performance do canal.
           </p>
         </div>
@@ -847,7 +905,7 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-lideranca.jpg" alt="Liderança e gestão de operação" />
             <div class="media-overlay"></div>
-            <div class="media-label">E-commerce · Crescimento · Liderança</div>
+            <div class="media-label" data-i18n="lideranca.label">E-commerce · Crescimento · Liderança</div>
           </div>
         </div>
       </div>
@@ -857,12 +915,12 @@
       <div class="slide-inner">
         <div class="content reveal">
           <div class="slide-index">04</div>
-          <span class="eyebrow">Capítulo 4</span>
-          <h2>Foi aí que percebi que meus verdadeiros clientes eram os dados.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="virada.eyebrow">Capítulo 4</span>
+          <h2 data-i18n="virada.title">Foi aí que percebi que meus verdadeiros clientes eram os dados.</h2>
+          <p class="subtitle" data-i18n="virada.body1">
             Nesse momento tive um insight: eu operava uma “loja” em que os dados eram o centro. Eu precisava atraí-los, tratá-los e fidelizá-los com inteligência, da mesma forma que fazia com consumidores.
           </p>
-          <p class="subtitle" style="margin-top:18px;">
+          <p class="subtitle" style="margin-top:18px;" data-i18n="virada.body2">
             Essa virada me levou ao curso de Ciência de Dados e Inteligência Artificial no Ibmec. A decisão foi clara: unir visão de negócios com excelência técnica para transformar dados em resultado real.
           </p>
         </div>
@@ -871,7 +929,7 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-virada.jpg" alt="Pessoa apresentando tecnologia e dados" />
             <div class="media-overlay"></div>
-            <div class="media-label">Insight · Dados · Direção de carreira</div>
+            <div class="media-label" data-i18n="virada.label">Insight · Dados · Direção de carreira</div>
           </div>
         </div>
       </div>
@@ -883,25 +941,25 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-academico.jpg" alt="Grupo acadêmico em ambiente colaborativo" />
             <div class="media-overlay"></div>
-            <div class="media-label">Hackathons · Comunidade · Protagonismo</div>
+            <div class="media-label" data-i18n="academico.label">Hackathons · Comunidade · Protagonismo</div>
           </div>
         </div>
 
         <div class="content reveal">
           <div class="slide-index">05</div>
-          <span class="eyebrow">Capítulo 5</span>
-          <h2>Formação com participação ativa desde o início.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="academico.eyebrow">Capítulo 5</span>
+          <h2 data-i18n="academico.title">Formação com participação ativa desde o início.</h2>
+          <p class="subtitle" data-i18n="academico.body1">
             Iniciei a graduação em fevereiro de 2024, participando ativamente de hackathons e projetos práticos desde o começo. Mais do que aprender, passei a construir, apresentar e testar soluções em contextos reais.
           </p>
-          <p class="subtitle" style="margin-top:18px;">
+          <p class="subtitle" style="margin-top:18px;" data-i18n="academico.body2">
             Além do envolvimento técnico, conquistei posições de destaque na comunidade acadêmica: fui selecionado como Embaixador da faculdade e ingressei na Liga Acadêmica de Tecnologia.
           </p>
           <div class="skills-wrap">
-            <span class="skill">Hackathons</span>
-            <span class="skill">Projetos práticos</span>
-            <span class="skill">Embaixador Ibmec</span>
-            <span class="skill">Liga Acadêmica</span>
+            <span class="skill" data-i18n="academico.skill1">Hackathons</span>
+            <span class="skill" data-i18n="academico.skill2">Projetos práticos</span>
+            <span class="skill" data-i18n="academico.skill3">Embaixador Ibmec</span>
+            <span class="skill" data-i18n="academico.skill4">Liga Acadêmica</span>
           </div>
         </div>
       </div>
@@ -911,12 +969,12 @@
       <div class="slide-inner">
         <div class="content reveal">
           <div class="slide-index">06</div>
-          <span class="eyebrow">Capítulo 6</span>
-          <h2>Aprendizado transformado em performance.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="conquistas.eyebrow">Capítulo 6</span>
+          <h2 data-i18n="conquistas.title">Aprendizado transformado em performance.</h2>
+          <p class="subtitle" data-i18n="conquistas.body">
             Conquistei o 1º lugar no Hackathon de IA Generativa, o 3º lugar no Hackathon Green Digital Skills e também participei do Desafio Mastercard, atuando em contextos que exigiram análise, estratégia, construção de solução e apresentação de valor.
           </p>
-          <p class="quote">
+          <p class="quote" data-i18n="conquistas.quote">
             Meu diferencial está em unir repertório de negócio, visão analítica e capacidade real de construir soluções.
           </p>
         </div>
@@ -925,7 +983,7 @@
           <div class="media-frame">
             <img src="assets/img/capitulo-conquistas.jpg" alt="Pessoa apresentando projeto em evento" />
             <div class="media-overlay"></div>
-            <div class="media-label">1º lugar IA Generativa · 3º lugar Green Digital Skills · Mastercard</div>
+            <div class="media-label" data-i18n="conquistas.label">1º lugar IA Generativa · 3º lugar Green Digital Skills · Mastercard</div>
           </div>
         </div>
       </div>
@@ -934,9 +992,9 @@
     <section class="slide compact" id="projetos">
       <div class="slide-inner">
         <div class="section-title reveal">
-          <span class="eyebrow">Projetos em destaque</span>
-          <h2>Cases que conectam tecnologia, análise e resultado.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="projetos.eyebrow">Projetos em destaque</span>
+          <h2 data-i18n="projetos.title">Cases que conectam tecnologia, análise e resultado.</h2>
+          <p class="subtitle" data-i18n="projetos.intro">
             Aqui, o portfólio deixa de ser apenas narrativa e vira evidência. Cada projeto reflete uma combinação entre visão estratégica, construção técnica e aplicação prática.
           </p>
         </div>
@@ -947,9 +1005,9 @@
                 <img src="assets/img/projeto-tatiart.jpg" alt="Interface de website e analytics" />
             </div>
             <div class="project-body">
-              <div class="project-kicker">Projeto 01</div>
-              <h3>Tatiart</h3>
-              <p>
+              <div class="project-kicker" data-i18n="projetos.tatiart.kicker">Projeto 01</div>
+              <h3 data-i18n="projetos.tatiart.title">Tatiart</h3>
+              <p data-i18n="projetos.tatiart.body">
                 Desenvolvimento de uma plataforma web focada em conversão de vendas, com front-end em HTML, CSS e JavaScript e back-end em Java Spring Boot. O projeto aplicou fundamentos de e-commerce para estruturar SEO, captação de leads e i18n, preparando a aplicação para múltiplos mercados.
               </p>
               <div class="skills-wrap">
@@ -968,17 +1026,17 @@
                 <img src="assets/img/projeto-cittamobi.jpg" alt="Dashboard e análise de dados" />
             </div>
             <div class="project-body">
-              <div class="project-kicker">Projeto 02</div>
-              <h3>Projeto de Dados · Cittamobi</h3>
-              <p>
+              <div class="project-kicker" data-i18n="projetos.cittamobi.kicker">Projeto 02</div>
+              <h3 data-i18n="projetos.cittamobi.title">Projeto de Dados · Cittamobi</h3>
+              <p data-i18n="projetos.cittamobi.body">
                 Análise estratégica com dados reais de acesso ao app, utilizando Python e Power BI para mapear perfil de usuário e identificar padrões de comportamento. A análise foi aprofundada com bases externas de geografia, eventos e clima, gerando insights sobre corredores de ônibus e picos de demanda.
               </p>
               <div class="skills-wrap">
                 <span class="skill">Python</span>
                 <span class="skill">Power BI</span>
-                <span class="skill">Análise comportamental</span>
-                <span class="skill">Dados externos</span>
-                <span class="skill">Insights de mobilidade</span>
+                <span class="skill" data-i18n="projetos.cittamobi.skill3">Análise comportamental</span>
+                <span class="skill" data-i18n="projetos.cittamobi.skill4">Dados externos</span>
+                <span class="skill" data-i18n="projetos.cittamobi.skill5">Insights de mobilidade</span>
               </div>
             </div>
           </article>
@@ -988,16 +1046,16 @@
                 <img src="assets/img/projeto-aurora-viridis.jpg" alt="Projeto voltado para energia e estratégia de mercado" />
             </div>
             <div class="project-body">
-              <div class="project-kicker">Projeto 03</div>
-              <h3>Aurora Viridis</h3>
-              <p>
+              <div class="project-kicker" data-i18n="projetos.aurora.kicker">Projeto 03</div>
+              <h3 data-i18n="projetos.aurora.title">Aurora Viridis</h3>
+              <p data-i18n="projetos.aurora.body">
                 Projeto desenvolvido no contexto do Green Digital Skills, criando uma proposta de negócio voltada ao mercado livre de energia. A Aurora Viridis foi pensada como uma empresa capaz de impulsionar a venda de energia nesse mercado, conectando estratégia, inovação e visão de futuro para um setor em transformação.
               </p>
               <div class="skills-wrap">
                 <span class="skill">Green Digital Skills</span>
-                <span class="skill">Modelo de negócio</span>
-                <span class="skill">Mercado livre de energia</span>
-                <span class="skill">Estratégia</span>
+                <span class="skill" data-i18n="projetos.aurora.skill2">Modelo de negócio</span>
+                <span class="skill" data-i18n="projetos.aurora.skill3">Mercado livre de energia</span>
+                <span class="skill" data-i18n="projetos.aurora.skill4">Estratégia</span>
               </div>
             </div>
           </article>
@@ -1007,16 +1065,16 @@
                 <img src="assets/img/projeto-monevo.jpg" alt="Projeto de tecnologia financeira e organização" />
             </div>
             <div class="project-body">
-              <div class="project-kicker">Projeto 04</div>
-              <h3>Monevo</h3>
-              <p>
+              <div class="project-kicker" data-i18n="projetos.monevo.kicker">Projeto 04</div>
+              <h3 data-i18n="projetos.monevo.title">Monevo</h3>
+              <p data-i18n="projetos.monevo.body">
                 Projeto criado com foco em organização e inteligência aplicada ao contexto financeiro, combinando tecnologia, visão de produto e construção estratégica. A proposta nasceu para transformar complexidade em clareza, com uma solução pensada para gerar valor real a partir de dados, experiência e direcionamento.
               </p>
               <div class="skills-wrap">
-                <span class="skill">Produto digital</span>
-                <span class="skill">Estratégia</span>
-                <span class="skill">Finanças</span>
-                <span class="skill">Inovação</span>
+                <span class="skill" data-i18n="projetos.monevo.skill1">Produto digital</span>
+                <span class="skill" data-i18n="projetos.monevo.skill2">Estratégia</span>
+                <span class="skill" data-i18n="projetos.monevo.skill3">Finanças</span>
+                <span class="skill" data-i18n="projetos.monevo.skill4">Inovação</span>
               </div>
             </div>
           </article>
@@ -1027,9 +1085,9 @@
     <section class="slide compact" id="certificados">
       <div class="slide-inner">
         <div class="section-title reveal">
-          <span class="eyebrow">Certificados</span>
-          <h2>Formação contínua em dados, IA e negócios.</h2>
-          <p class="subtitle">
+          <span class="eyebrow" data-i18n="certificados.eyebrow">Certificados</span>
+          <h2 data-i18n="certificados.title">Formação contínua em dados, IA e negócios.</h2>
+          <p class="subtitle" data-i18n="certificados.intro">
             Cada certificado representa uma camada de aprofundamento técnico ou estratégico que sustenta minha forma de trabalhar. Da engenharia de dados ao branding, passando por machine learning, qualidade de processos e desenvolvimento socioemocional.
           </p>
         </div>
@@ -1047,7 +1105,7 @@
                 <span class="skill">Soft skills</span>
                 <span class="skill">Inteligência emocional</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/ibmec-projeto-ii.jpg" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/ibmec-projeto-ii.jpg" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1064,7 +1122,7 @@
                 <span class="skill">IA Generativa</span>
                 <span class="skill">Google Cloud</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/google-vertex-ai.png" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/google-vertex-ai.png" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1080,7 +1138,7 @@
                 <span class="skill">Classificação</span>
                 <span class="skill">Scikit-learn</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/alura-ml-sklearn.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/alura-ml-sklearn.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1096,7 +1154,7 @@
                 <span class="skill">Arquitetura de marca</span>
                 <span class="skill">Comunicação</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/espm-branding.jpeg" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/espm-branding.jpeg" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1112,7 +1170,7 @@
                 <span class="skill">Melhoria de processos</span>
                 <span class="skill">Gestão da qualidade</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/sixsigma-white-belt.jpeg" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/sixsigma-white-belt.jpeg" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1128,7 +1186,7 @@
                 <span class="skill">Data Engineering</span>
                 <span class="skill">Lakehouse</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-get-started-de.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-get-started-de.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1144,7 +1202,7 @@
                 <span class="skill">CI/CD</span>
                 <span class="skill">Git</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-devops.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-devops.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1160,7 +1218,7 @@
                 <span class="skill">Stream Processing</span>
                 <span class="skill">Big Data</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-spark-streaming.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-spark-streaming.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1176,7 +1234,7 @@
                 <span class="skill">Automação de deploy</span>
                 <span class="skill">Infraestrutura como código</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-asset-bundles.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-asset-bundles.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1192,7 +1250,7 @@
                 <span class="skill">Modelagem dimensional</span>
                 <span class="skill">SQL Analytics</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-data-warehousing.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-data-warehousing.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
 
@@ -1208,7 +1266,7 @@
                 <span class="skill">Business Intelligence</span>
                 <span class="skill">Dashboards</span>
               </div>
-              <a class="certificate-link" href="assets/certificados/databricks-ai-bi.pdf" target="_blank" rel="noopener noreferrer">Ver certificado →</a>
+              <a class="certificate-link" href="assets/certificados/databricks-ai-bi.pdf" target="_blank" rel="noopener noreferrer" data-i18n="certificados.viewLink">Ver certificado →</a>
             </div>
           </article>
         </div>
@@ -1219,30 +1277,30 @@
       <div class="slide-inner">
         <div class="contact-grid">
           <div class="contact-card reveal">
-            <span class="eyebrow">Encerramento</span>
-            <h2>Vamos construir algo relevante.</h2>
-            <p class="subtitle">
+            <span class="eyebrow" data-i18n="contato.eyebrow">Encerramento</span>
+            <h2 data-i18n="contato.title">Vamos construir algo relevante.</h2>
+            <p class="subtitle" data-i18n="contato.body">
               Este portfólio é uma síntese da minha trajetória até aqui: uma combinação entre execução, estratégia, dados e construção. Se fizer sentido para o seu contexto, vamos conversar.
             </p>
             <div class="contact-list">
               <div class="contact-item">
-                <span>Telefone</span>
+                <span data-i18n="contato.phoneLabel">Telefone</span>
                 <strong>(11) 99418-9595</strong>
               </div>
               <div class="contact-item">
-                <span>E-mail</span>
+                <span data-i18n="contato.emailLabel">E-mail</span>
                 <a href="mailto:daviyoshio219@gmail.com">daviyoshio219@gmail.com</a>
               </div>
               <div class="contact-item">
-                <span>LinkedIn</span>
+                <span data-i18n="contato.linkedinLabel">LinkedIn</span>
                 <a href="https://www.linkedin.com/in/daviyoshio/" target="_blank" rel="noopener noreferrer">linkedin.com/in/daviyoshio</a>
               </div>
             </div>
           </div>
 
           <div class="contact-card reveal">
-            <span class="eyebrow">Core skills</span>
-            <h3>Tecnologias e repertório</h3>
+            <span class="eyebrow" data-i18n="contato.skillsEyebrow">Core skills</span>
+            <h3 data-i18n="contato.skillsTitle">Tecnologias e repertório</h3>
             <div class="skills-wrap">
               <span class="skill">Python</span>
               <span class="skill">Power BI</span>
@@ -1259,7 +1317,7 @@
               <span class="skill">Visão de negócio</span>
             </div>
             <div class="actions" style="margin-top:32px;">
-              <a class="button" href="#intro">Voltar ao início</a>
+              <a class="button" href="#intro" data-i18n="contato.backToTop">Voltar ao início</a>
             </div>
           </div>
         </div>
