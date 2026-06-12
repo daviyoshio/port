@@ -70,9 +70,8 @@
 
       'pagbank.eyebrow': 'Capítulo 7',
       'pagbank.title': 'Primeira experiência na indústria: Data & AI no PagBank.',
-      'pagbank.body1': 'Entrei no PagBank como estagiário de Data & AI, contribuindo em iniciativas dos times de Data Engineering e AI Foundation. É a fase em que minha trajetória de negócios e tecnologia ganha forma dentro de uma operação de dados em escala real.',
-      'pagbank.body2': 'No time de Data Engineering, mergulhei no ecossistema de dados da empresa: Data Lake, Lakehouse, Data Warehouse, providers, fluxos de ingestão e os fundamentos da arquitetura que sustenta produtos analíticos.',
-      'pagbank.body3': 'No time de AI Foundation, apoio a análise e melhoria de documentação técnica sobre plataformas de IA, POCs, arquiteturas de agentes, ferramentas internas e padrões de engenharia, ajudando a tornar temas complexos mais claros para os times. Reviso e organizo materiais envolvendo LLMs, RAG, agentes, APIs, platform engineering e arquitetura de soluções de dados e IA.',
+      'pagbank.body1': 'Entrei no PagBank como estagiário de Data & AI, contribuindo em iniciativas dos times de Data Engineering e AI Foundation — a fase em que minha trajetória de negócios e tecnologia ganha forma dentro de uma operação de dados em escala real.',
+      'pagbank.body2': 'No Data Engineering, mergulhei no ecossistema de dados da empresa: Data Lake, Lakehouse, Data Warehouse e fluxos de ingestão. No AI Foundation, apoio a documentação técnica de plataformas de IA, POCs e arquiteturas de agentes, organizando materiais sobre LLMs, RAG, APIs e platform engineering.',
       'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Projetos em destaque',
@@ -186,9 +185,8 @@
 
       'pagbank.eyebrow': 'Chapter 7',
       'pagbank.title': 'First industry experience: Data & AI at PagBank.',
-      'pagbank.body1': 'I joined PagBank as a Data & AI Intern, contributing to initiatives across the Data Engineering and AI Foundation teams. This is the phase where my business and technology trajectory takes shape inside a real-scale data operation.',
-      'pagbank.body2': 'On the Data Engineering team, I gained exposure to the company’s data ecosystem: Data Lake, Lakehouse, Data Warehouse concepts, data providers, ingestion flows and the architectural foundations that support analytical products.',
-      'pagbank.body3': 'On the AI Foundation team, I support the analysis and improvement of technical documentation related to AI platforms, POCs, agent architectures, internal tools and engineering standards, helping make complex topics clearer for engineering teams. I contribute to the review and organization of materials involving LLMs, RAG, AI agents, APIs, platform engineering and data/AI solution architecture.',
+      'pagbank.body1': 'I joined PagBank as a Data & AI Intern, contributing to initiatives across the Data Engineering and AI Foundation teams — the phase where my business and technology trajectory takes shape inside a real-scale data operation.',
+      'pagbank.body2': 'On Data Engineering, I gained exposure to the company’s data ecosystem: Data Lake, Lakehouse, Data Warehouse and ingestion flows. On AI Foundation, I support technical documentation for AI platforms, POCs and agent architectures, organizing materials on LLMs, RAG, APIs and platform engineering.',
       'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Featured projects',
@@ -302,9 +300,8 @@
 
       'pagbank.eyebrow': 'Capítulo 7',
       'pagbank.title': 'Primera experiencia en la industria: Data & AI en PagBank.',
-      'pagbank.body1': 'Entré a PagBank como pasante de Data & AI, contribuyendo en iniciativas de los equipos de Data Engineering y AI Foundation. Es la fase en la que mi trayectoria de negocio y tecnología toma forma dentro de una operación de datos a escala real.',
-      'pagbank.body2': 'En el equipo de Data Engineering, me sumergí en el ecosistema de datos de la empresa: Data Lake, Lakehouse, Data Warehouse, proveedores de datos, flujos de ingesta y los fundamentos de la arquitectura que sostiene los productos analíticos.',
-      'pagbank.body3': 'En el equipo de AI Foundation, apoyo el análisis y la mejora de la documentación técnica sobre plataformas de IA, POCs, arquitecturas de agentes, herramientas internas y estándares de ingeniería, ayudando a hacer más claros temas complejos para los equipos. Reviso y organizo materiales sobre LLMs, RAG, agentes, APIs, platform engineering y arquitectura de soluciones de datos e IA.',
+      'pagbank.body1': 'Entré a PagBank como pasante de Data & AI, contribuyendo en iniciativas de los equipos de Data Engineering y AI Foundation — la fase en la que mi trayectoria de negocio y tecnología toma forma dentro de una operación de datos a escala real.',
+      'pagbank.body2': 'En Data Engineering, me sumergí en el ecosistema de datos de la empresa: Data Lake, Lakehouse, Data Warehouse y flujos de ingesta. En AI Foundation, apoyo la documentación técnica de plataformas de IA, POCs y arquitecturas de agentes, organizando materiales sobre LLMs, RAG, APIs y platform engineering.',
       'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Proyectos destacados',

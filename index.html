@@ -191,7 +191,7 @@
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       gap: 34px;
-      align-items: center;
+      align-items: stretch;
     }
 
     .slide.compact .slide-inner {
@@ -487,6 +487,16 @@
       font-size: 0.92rem;
     }
 
+    .skills-wrap.compact {
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .skills-wrap.compact .skill {
+      padding: 8px 13px;
+      font-size: 0.82rem;
+    }
+
     .quote {
       margin-top: 22px;
       padding-left: 18px;
@@ -511,7 +521,7 @@
       box-shadow: var(--shadow);
       padding: 16px;
       display: grid;
-      grid-template-rows: 180px auto;
+      grid-template-rows: 210px auto;
       gap: 14px;
       position: relative;
       overflow: hidden;
@@ -528,19 +538,26 @@
       overflow: hidden;
       position: relative;
       border: 1px solid rgba(255,255,255,0.08);
-      background: #fafafa;
+      background: #f4f4f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
 
     .certificate-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
       object-position: center;
+      border-radius: 6px;
       transition: transform 0.7s ease;
     }
 
     .certificate-card:hover .certificate-image img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .certificate-body {
@@ -997,29 +1014,21 @@
           <span class="eyebrow" data-i18n="pagbank.eyebrow">Capítulo 7</span>
           <h2 data-i18n="pagbank.title">Primeira experiência na indústria: Data &amp; AI no PagBank.</h2>
           <p class="subtitle" data-i18n="pagbank.body1">
-            Entrei no PagBank como estagiário de Data &amp; AI, contribuindo em iniciativas dos times de Data Engineering e AI Foundation. É a fase em que minha trajetória de negócios e tecnologia ganha forma dentro de uma operação de dados em escala real.
+            Entrei no PagBank como estagiário de Data &amp; AI, contribuindo em iniciativas dos times de Data Engineering e AI Foundation — a fase em que minha trajetória de negócios e tecnologia ganha forma dentro de uma operação de dados em escala real.
           </p>
           <p class="subtitle" style="margin-top:18px;" data-i18n="pagbank.body2">
-            No time de Data Engineering, mergulhei no ecossistema de dados da empresa: Data Lake, Lakehouse, Data Warehouse, providers, fluxos de ingestão e os fundamentos da arquitetura que sustenta produtos analíticos.
+            No Data Engineering, mergulhei no ecossistema de dados da empresa: Data Lake, Lakehouse, Data Warehouse e fluxos de ingestão. No AI Foundation, apoio a documentação técnica de plataformas de IA, POCs e arquiteturas de agentes, organizando materiais sobre LLMs, RAG, APIs e platform engineering.
           </p>
-          <p class="subtitle" style="margin-top:18px;" data-i18n="pagbank.body3">
-            No time de AI Foundation, apoio a análise e melhoria de documentação técnica sobre plataformas de IA, POCs, arquiteturas de agentes, ferramentas internas e padrões de engenharia, ajudando a tornar temas complexos mais claros para os times. Reviso e organizo materiais envolvendo LLMs, RAG, agentes, APIs, platform engineering e arquitetura de soluções de dados e IA.
-          </p>
-          <div class="skills-wrap">
+          <div class="skills-wrap compact">
             <span class="skill">Data Lake</span>
             <span class="skill">Lakehouse</span>
             <span class="skill">Data Warehouse</span>
-            <span class="skill">Ingestão de dados</span>
             <span class="skill">SQL</span>
             <span class="skill">LLMs &amp; RAG</span>
             <span class="skill">LangChain</span>
             <span class="skill">LangGraph</span>
             <span class="skill">LiteLLM</span>
-            <span class="skill">Quarkus</span>
-            <span class="skill">Orquestração de LLMs</span>
             <span class="skill">Platform Engineering</span>
-            <span class="skill">Arquitetura de soluções</span>
-            <span class="skill">Documentação técnica</span>
           </div>
         </div>
 
