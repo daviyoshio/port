@@ -612,6 +612,58 @@
       border-color: white;
     }
 
+    .certificates-collapse {
+      position: relative;
+      max-height: 640px;
+      overflow: hidden;
+      transition: max-height 0.7s ease;
+    }
+
+    .certificates-collapse.expanded {
+      max-height: 6000px;
+    }
+
+    .certificates-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 240px;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 55%, var(--bg) 100%);
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .certificates-collapse.expanded .certificates-fade {
+      opacity: 0;
+    }
+
+    .certificates-more {
+      display: flex;
+      justify-content: center;
+      margin-top: 26px;
+    }
+
+    .cert-toggle {
+      cursor: pointer;
+      font-family: inherit;
+      color: white;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 13px 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      transition: 0.3s ease;
+    }
+
+    .cert-toggle:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -1145,6 +1197,7 @@
           </p>
         </div>
 
+        <div class="certificates-collapse" id="certCollapse">
         <div class="certificates-grid">
           <article class="certificate-card reveal">
             <div class="certificate-image">
@@ -1323,6 +1376,11 @@
             </div>
           </article>
         </div>
+          <div class="certificates-fade" aria-hidden="true"></div>
+        </div>
+        <div class="certificates-more">
+          <button class="cert-toggle reveal" id="certToggle" type="button" data-i18n="certificados.showMore" aria-expanded="false" aria-controls="certCollapse">Ver mais certificados</button>
+        </div>
       </div>
     </section>
 
@@ -1417,6 +1475,26 @@
 
     window.addEventListener('scroll', setActiveLink);
     setActiveLink();
+
+    const certCollapse = document.getElementById('certCollapse');
+    const certToggle = document.getElementById('certToggle');
+    if (certCollapse && certToggle) {
+      const certLabels = {
+        pt: { more: 'Ver mais certificados', less: 'Ver menos' },
+        en: { more: 'Show more certificates', less: 'Show less' },
+        es: { more: 'Ver más certificados', less: 'Ver menos' }
+      };
+      const certLang = () => {
+        const l = (localStorage.getItem('portfolio.lang') || document.documentElement.lang || 'pt').slice(0, 2);
+        return certLabels[l] ? l : 'pt';
+      };
+      certToggle.addEventListener('click', () => {
+        const expanded = certCollapse.classList.toggle('expanded');
+        certToggle.setAttribute('aria-expanded', expanded);
+        certToggle.setAttribute('data-i18n', expanded ? 'certificados.showLess' : 'certificados.showMore');
+        certToggle.textContent = certLabels[certLang()][expanded ? 'less' : 'more'];
+      });
+    }
   </script>
 </body>
 </html>

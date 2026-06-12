@@ -108,6 +108,8 @@
       'certificados.title': 'Formação contínua em dados, IA e negócios.',
       'certificados.intro': 'Cada certificado representa uma camada de aprofundamento técnico ou estratégico que sustenta minha forma de trabalhar. Da engenharia de dados ao branding, passando por machine learning, qualidade de processos e desenvolvimento socioemocional.',
       'certificados.viewLink': 'Ver certificado →',
+      'certificados.showMore': 'Ver mais certificados',
+      'certificados.showLess': 'Ver menos',
 
       'contato.eyebrow': 'Encerramento',
       'contato.title': 'Vamos construir algo relevante.',
@@ -223,6 +225,8 @@
       'certificados.title': 'Continuous learning in data, AI and business.',
       'certificados.intro': 'Each certificate represents a layer of technical or strategic depth that supports the way I work. From data engineering to branding, through machine learning, process quality and socio-emotional development.',
       'certificados.viewLink': 'View certificate →',
+      'certificados.showMore': 'Show more certificates',
+      'certificados.showLess': 'Show less',
 
       'contato.eyebrow': 'Closing',
       'contato.title': 'Let\'s build something relevant.',
@@ -338,6 +342,8 @@
       'certificados.title': 'Formación continua en datos, IA y negocios.',
       'certificados.intro': 'Cada certificado representa una capa de profundización técnica o estratégica que sostiene mi forma de trabajar. De la ingeniería de datos al branding, pasando por machine learning, calidad de procesos y desarrollo socioemocional.',
       'certificados.viewLink': 'Ver certificado →',
+      'certificados.showMore': 'Ver más certificados',
+      'certificados.showLess': 'Ver menos',
 
       'contato.eyebrow': 'Cierre',
       'contato.title': 'Construyamos algo relevante.',
