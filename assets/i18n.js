@@ -15,6 +15,7 @@
       'nav.projetos': 'Projetos',
       'nav.conquistas': 'Conquistas',
       'nav.certificados': 'Certificados',
+      'nav.pagbank': 'PagBank',
       'nav.contato': 'Contato',
 
       'intro.eyebrow': 'Portfólio · storytelling profissional',
@@ -66,6 +67,13 @@
       'conquistas.body': 'Conquistei o 1º lugar no Hackathon de IA Generativa, o 3º lugar no Hackathon Green Digital Skills e também participei do Desafio Mastercard, atuando em contextos que exigiram análise, estratégia, construção de solução e apresentação de valor.',
       'conquistas.quote': 'Meu diferencial está em unir repertório de negócio, visão analítica e capacidade real de construir soluções.',
       'conquistas.label': '1º lugar IA Generativa · 3º lugar Green Digital Skills · Mastercard',
+
+      'pagbank.eyebrow': 'Capítulo 7',
+      'pagbank.title': 'Primeira experiência na indústria: Data & AI no PagBank.',
+      'pagbank.body1': 'Entrei no PagBank como estagiário de Data & AI, contribuindo em iniciativas dos times de Data Engineering e AI Foundation. É a fase em que minha trajetória de negócios e tecnologia ganha forma dentro de uma operação de dados em escala real.',
+      'pagbank.body2': 'No time de Data Engineering, mergulhei no ecossistema de dados da empresa: Data Lake, Lakehouse, Data Warehouse, providers, fluxos de ingestão e os fundamentos da arquitetura que sustenta produtos analíticos.',
+      'pagbank.body3': 'No time de AI Foundation, apoio a análise e melhoria de documentação técnica sobre plataformas de IA, POCs, arquiteturas de agentes, ferramentas internas e padrões de engenharia, ajudando a tornar temas complexos mais claros para os times. Reviso e organizo materiais envolvendo LLMs, RAG, agentes, APIs, platform engineering e arquitetura de soluções de dados e IA.',
+      'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Projetos em destaque',
       'projetos.title': 'Cases que conectam tecnologia, análise e resultado.',
@@ -123,6 +131,7 @@
       'nav.projetos': 'Projects',
       'nav.conquistas': 'Achievements',
       'nav.certificados': 'Certificates',
+      'nav.pagbank': 'PagBank',
       'nav.contato': 'Contact',
 
       'intro.eyebrow': 'Portfolio · professional storytelling',
@@ -174,6 +183,13 @@
       'conquistas.body': 'I won 1st place at the Generative AI Hackathon, 3rd place at the Green Digital Skills Hackathon, and also took part in the Mastercard Challenge, working in contexts that required analysis, strategy, solution building and value pitching.',
       'conquistas.quote': 'My edge lies in combining business repertoire, analytical vision and real solution-building capacity.',
       'conquistas.label': '1st place Generative AI · 3rd place Green Digital Skills · Mastercard',
+
+      'pagbank.eyebrow': 'Chapter 7',
+      'pagbank.title': 'First industry experience: Data & AI at PagBank.',
+      'pagbank.body1': 'I joined PagBank as a Data & AI Intern, contributing to initiatives across the Data Engineering and AI Foundation teams. This is the phase where my business and technology trajectory takes shape inside a real-scale data operation.',
+      'pagbank.body2': 'On the Data Engineering team, I gained exposure to the company’s data ecosystem: Data Lake, Lakehouse, Data Warehouse concepts, data providers, ingestion flows and the architectural foundations that support analytical products.',
+      'pagbank.body3': 'On the AI Foundation team, I support the analysis and improvement of technical documentation related to AI platforms, POCs, agent architectures, internal tools and engineering standards, helping make complex topics clearer for engineering teams. I contribute to the review and organization of materials involving LLMs, RAG, AI agents, APIs, platform engineering and data/AI solution architecture.',
+      'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Featured projects',
       'projetos.title': 'Cases that connect technology, analysis and results.',
@@ -231,6 +247,7 @@
       'nav.projetos': 'Proyectos',
       'nav.conquistas': 'Logros',
       'nav.certificados': 'Certificados',
+      'nav.pagbank': 'PagBank',
       'nav.contato': 'Contacto',
 
       'intro.eyebrow': 'Portafolio · storytelling profesional',
@@ -282,6 +299,13 @@
       'conquistas.body': 'Conquisté el 1.º lugar en el Hackathon de IA Generativa, el 3.º lugar en el Hackathon Green Digital Skills y también participé en el Desafío Mastercard, actuando en contextos que exigieron análisis, estrategia, construcción de solución y presentación de valor.',
       'conquistas.quote': 'Mi diferencial está en unir repertorio de negocio, visión analítica y capacidad real de construir soluciones.',
       'conquistas.label': '1.º lugar IA Generativa · 3.º lugar Green Digital Skills · Mastercard',
+
+      'pagbank.eyebrow': 'Capítulo 7',
+      'pagbank.title': 'Primera experiencia en la industria: Data & AI en PagBank.',
+      'pagbank.body1': 'Entré a PagBank como pasante de Data & AI, contribuyendo en iniciativas de los equipos de Data Engineering y AI Foundation. Es la fase en la que mi trayectoria de negocio y tecnología toma forma dentro de una operación de datos a escala real.',
+      'pagbank.body2': 'En el equipo de Data Engineering, me sumergí en el ecosistema de datos de la empresa: Data Lake, Lakehouse, Data Warehouse, proveedores de datos, flujos de ingesta y los fundamentos de la arquitectura que sostiene los productos analíticos.',
+      'pagbank.body3': 'En el equipo de AI Foundation, apoyo el análisis y la mejora de la documentación técnica sobre plataformas de IA, POCs, arquitecturas de agentes, herramientas internas y estándares de ingeniería, ayudando a hacer más claros temas complejos para los equipos. Reviso y organizo materiales sobre LLMs, RAG, agentes, APIs, platform engineering y arquitectura de soluciones de datos e IA.',
+      'pagbank.label': 'Data Engineering · AI Foundation · LLMs & RAG',
 
       'projetos.eyebrow': 'Proyectos destacados',
       'projetos.title': 'Casos que conectan tecnología, análisis y resultado.',
