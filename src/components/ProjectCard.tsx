@@ -26,7 +26,7 @@ export function ProjectCard({
           alt={meta.alt}
           loading="lazy"
           decoding="async"
-          className="aspect-[16/10] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
+          className="aspect-[16/9] w-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent" />
       </div>

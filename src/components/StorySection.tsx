@@ -79,7 +79,7 @@ function ChapterBlock({
             alt={meta.alt}
             loading="lazy"
             decoding="async"
-            className="aspect-[4/3] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+            className="aspect-[4/5] w-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
         </div>
