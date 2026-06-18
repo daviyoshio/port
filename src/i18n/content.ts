@@ -66,10 +66,6 @@ export interface Dictionary {
     ctaProjects: string;
     ctaCV: string;
     ctaContact: string;
-    panelLabel: string;
-    panelMetricLabel: string;
-    panelBadge: string;
-    panelFootnote: string;
   };
 
   story: {
@@ -181,10 +177,6 @@ const pt: Dictionary = {
     ctaProjects: "Ver projetos",
     ctaCV: "Baixar CV",
     ctaContact: "Entrar em contato",
-    panelLabel: "Da operação à decisão",
-    panelMetricLabel: "Crescimento da operação de e-commerce",
-    panelBadge: "do zero",
-    panelFootnote: "Negócio · Dados · IA · Execução",
   },
 
   story: {
@@ -466,10 +458,6 @@ const en: Dictionary = {
     ctaProjects: "See projects",
     ctaCV: "Download CV",
     ctaContact: "Get in touch",
-    panelLabel: "From operations to decisions",
-    panelMetricLabel: "E-commerce operation growth",
-    panelBadge: "from zero",
-    panelFootnote: "Business · Data · AI · Execution",
   },
 
   story: {
@@ -751,10 +739,6 @@ const es: Dictionary = {
     ctaProjects: "Ver proyectos",
     ctaCV: "Descargar CV",
     ctaContact: "Contactar",
-    panelLabel: "De la operación a la decisión",
-    panelMetricLabel: "Crecimiento de la operación de e-commerce",
-    panelBadge: "desde cero",
-    panelFootnote: "Negocio · Datos · IA · Ejecución",
   },
 
   story: {
