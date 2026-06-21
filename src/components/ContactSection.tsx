@@ -2,6 +2,7 @@ import { profile } from "../data/profile";
 import { useI18n } from "../i18n/LanguageContext";
 import { ButtonLink } from "./ui/Button";
 import { Reveal } from "./ui/Reveal";
+import { RevealText } from "./ui/RevealText";
 import { Section } from "./ui/Section";
 
 export function ContactSection() {
@@ -35,8 +36,8 @@ export function ContactSection() {
 
         <div className="relative mx-auto max-w-2xl text-center">
           <span className="eyebrow justify-center">{t.contact.eyebrow}</span>
-          <h2 className="mt-5 text-balance text-[clamp(2.2rem,5vw,3.6rem)] font-semibold leading-[1.05] text-ink">
-            {t.contact.title}
+          <h2 className="mt-5 text-balance text-[clamp(2.2rem,5vw,3.6rem)] font-semibold leading-[1.1] text-ink">
+            <RevealText text={t.contact.title} />
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-[1.1rem] leading-relaxed text-muted">
             {t.contact.body}

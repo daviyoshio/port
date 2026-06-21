@@ -2,6 +2,7 @@ import { MotionConfig } from "framer-motion";
 import { LanguageProvider } from "./i18n/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { SmoothScroll } from "./components/SmoothScroll";
 import { Hero } from "./components/Hero";
 import { StorySection } from "./components/StorySection";
 import { ImpactStats } from "./components/ImpactStats";
@@ -24,6 +25,7 @@ export default function App() {
           Ir para o conteúdo
         </a>
 
+        <SmoothScroll />
         <ScrollProgress />
         <Navbar />
 

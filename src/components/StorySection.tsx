@@ -4,6 +4,7 @@ import { chapters, type ChapterMeta } from "../data/chapters";
 import { useI18n } from "../i18n/LanguageContext";
 import type { ChapterCopy } from "../i18n/content";
 import { Reveal } from "./ui/Reveal";
+import { RevealText } from "./ui/RevealText";
 import { Section } from "./ui/Section";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Tag } from "./ui/Tag";
@@ -86,8 +87,8 @@ function ChapterBlock({
       </Reveal>
 
       <Reveal
-        y={36}
-        delay={0.08}
+        y={0}
+        delay={0.05}
         className={`relative ${mediaLeft ? "lg:order-2" : "lg:order-1"}`}
       >
         {/* Big ghost number watermark */}
@@ -103,8 +104,8 @@ function ChapterBlock({
           {copy.kicker}
         </span>
 
-        <h3 className="relative mt-4 text-balance text-[clamp(1.6rem,2.8vw,2.3rem)] font-semibold leading-[1.1] text-ink">
-          {copy.title}
+        <h3 className="relative mt-4 text-balance text-[clamp(1.6rem,2.8vw,2.3rem)] font-semibold leading-[1.12] text-ink">
+          <RevealText text={copy.title} />
         </h3>
 
         <div className="relative mt-4 flex flex-col gap-3">
