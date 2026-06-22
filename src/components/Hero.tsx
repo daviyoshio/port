@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useI18n } from "../i18n/LanguageContext";
 import { EASE } from "../lib/motion";
-import { AvatarCharacter } from "./AvatarCharacter";
+import { HeroBackground } from "./HeroBackground";
 import { RevealText } from "./ui/RevealText";
 
 export function Hero() {
@@ -19,7 +19,9 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(70%_50%_at_50%_25%,black,transparent_75%)]"
       />
 
-      <div className="relative flex w-full max-w-4xl flex-col items-center">
+      <HeroBackground />
+
+      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center">
         <motion.span
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -102,19 +104,16 @@ function ProfileCard({
       initial={{ opacity: 0, rotateX: 18, rotateY: -12, y: 18 }}
       animate={{ opacity: 1, rotateX: 0, rotateY: 0, y: 0 }}
       transition={{ duration: 0.85, delay: 0.75, ease: EASE }}
-      className="mt-12 flex items-center gap-4 rounded-2xl border border-white/60 bg-white/80 p-3 pr-6 shadow-float backdrop-blur-md"
+      className="mt-12 flex flex-col items-start gap-1.5 rounded-2xl border border-white/60 bg-white/80 px-5 py-4 shadow-float backdrop-blur-md"
     >
-      <AvatarCharacter className="h-16 w-16 shrink-0" />
-      <div className="text-left">
-        <span className="inline-flex items-center gap-1.5 rounded-pill border border-dashed border-accent/60 px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.1em] text-accent-ink">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-          {availability}
-        </span>
-        <div className="mt-1.5 font-mono text-[0.92rem] font-medium uppercase tracking-[0.04em] text-ink">
-          {name}
-        </div>
-        <div className="font-mono text-[0.72rem] text-muted">{role}</div>
+      <span className="inline-flex items-center gap-1.5 rounded-pill border border-dashed border-accent/60 px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.1em] text-accent-ink">
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+        {availability}
+      </span>
+      <div className="mt-0.5 font-mono text-[0.92rem] font-medium uppercase tracking-[0.04em] text-ink">
+        {name}
       </div>
+      <div className="font-mono text-[0.72rem] text-muted">{role}</div>
     </motion.div>
   );
 }
