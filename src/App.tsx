@@ -33,8 +33,8 @@ export default function App() {
 
         <main>
           <Hero />
-          <StorySection />
           <CoinSection />
+          <StorySection />
           <ImpactStats />
           <Projects />
           <SkillsSection />
