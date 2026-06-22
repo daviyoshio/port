@@ -6,7 +6,6 @@ import {
   useReducedMotion,
   useScroll,
   useTransform,
-  type MotionValue,
 } from "framer-motion";
 import { journeyLogos, type JourneyLogo } from "../data/journeyLogos";
 import { useI18n } from "../i18n/LanguageContext";
@@ -14,13 +13,15 @@ import { EASE } from "../lib/motion";
 
 const N = journeyLogos.length;
 
+// Coin geometry: real thickness built from stacked discs (the metallic edge).
+const THICKNESS = 26; // px
+const LAYERS = 26;
+
 /**
- * Scroll-driven 3D coin between the story and impact sections. The coin falls
- * in from above, spins on its Y axis flipping through each institution's logo
- * (Yamá → Ibmec → PagBank), the screen darkens, and the coin body cycles
- * white → purple → black → white before falling away. A white medallion keeps
- * each logo readable regardless of the body colour; a flip-card (two faces with
- * backface-hidden) avoids mirroring.
+ * Scroll-driven 3D coin between the story and impact sections. A real metallic
+ * coin (two faces + an extruded edge) falls in, spins on a tilted axis flipping
+ * through each institution's logo (Yamá → Ibmec → PagBank), the screen darkens,
+ * then it falls away. Inspired by the reference site's rotating-coin section.
  */
 export function CoinSection() {
   const { t } = useI18n();
@@ -32,13 +33,14 @@ export function CoinSection() {
     offset: ["start start", "end end"],
   });
 
-  // Spin (one full turn → the three logos).
-  const deg = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  // Spin (one turn → the three logos).
+  const spin = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
-  // Falling choreography: drop in tilted, settle, then fall away.
-  const y = useTransform(scrollYProgress, [0, 0.16, 0.84, 1], [-380, 0, 0, 420]);
-  const rotateX = useTransform(scrollYProgress, [0, 0.16, 0.84, 1], [72, 12, 12, -52]);
-  const scale = useTransform(scrollYProgress, [0, 0.16, 0.86, 1], [0.62, 1, 1, 0.78]);
+  // Falling choreography on the outer wrapper, with a constant organic tilt so
+  // the spin reads as a tossed coin rather than a flat turntable.
+  const y = useTransform(scrollYProgress, [0, 0.16, 0.84, 1], [-360, 0, 0, 420]);
+  const tiltX = useTransform(scrollYProgress, [0, 0.16, 0.84, 1], [68, 16, 16, -48]);
+  const scale = useTransform(scrollYProgress, [0, 0.16, 0.86, 1], [0.62, 1, 1, 0.8]);
   const coinOpacity = useTransform(scrollYProgress, [0, 0.07, 0.9, 1], [0, 1, 1, 0]);
 
   // Screen darkens through the middle, back to light to meet the next section.
@@ -52,15 +54,9 @@ export function CoinSection() {
     [0, 0.3, 0.72, 1],
     ["#0a0a0a", "#ffffff", "#ffffff", "#0a0a0a"],
   );
-  // Coin body: white → purple → black → white.
-  const bodyColor = useTransform(
-    scrollYProgress,
-    [0.16, 0.4, 0.64, 0.86],
-    ["#ffffff", "#7c3aed", "#161320", "#ffffff"],
-  );
 
   const [segment, setSegment] = useState(0);
-  useMotionValueEvent(deg, "change", (d) => {
+  useMotionValueEvent(spin, "change", (d) => {
     setSegment(Math.floor((d + 90) / 180));
   });
 
@@ -78,11 +74,11 @@ export function CoinSection() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-8">
             {journeyLogos.map((logo) => (
               <div key={logo.name} className="flex flex-col items-center gap-3">
-                <div className="grid h-28 w-28 place-items-center rounded-full border border-hairline bg-white shadow-soft">
+                <div className="grid h-28 w-28 place-items-center rounded-full bg-[radial-gradient(circle_at_36%_30%,#fcfbff,#e9e8f1_60%,#d2d0de)] shadow-soft">
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-[58%] max-w-[68%] object-contain"
+                    className="max-h-[52%] max-w-[64%] object-contain"
                   />
                 </div>
                 <span className="font-mono text-[0.72rem] uppercase tracking-[0.06em] text-ink">
@@ -110,16 +106,39 @@ export function CoinSection() {
         </motion.span>
 
         {/* Coin */}
-        <div className="relative mt-12" style={{ perspective: 1200 }} aria-hidden>
+        <div className="relative mt-12" style={{ perspective: 1300 }} aria-hidden>
           <motion.div
-            style={{ y, rotateX, scale, opacity: coinOpacity, transformStyle: "preserve-3d" }}
+            style={{
+              y,
+              scale,
+              opacity: coinOpacity,
+              rotateX: tiltX,
+              rotateZ: -11,
+              transformStyle: "preserve-3d",
+            }}
           >
             <motion.div
-              style={{ rotateY: deg, transformStyle: "preserve-3d" }}
+              style={{ rotateY: spin, transformStyle: "preserve-3d" }}
               className="relative h-[clamp(240px,52vw,460px)] w-[clamp(240px,52vw,460px)]"
             >
-              <CoinFace logo={journeyLogos[frontIndex]} bodyColor={bodyColor} />
-              <CoinFace logo={journeyLogos[backIndex]} bodyColor={bodyColor} back />
+              {/* Edge: stacked discs give real thickness + a metallic rim */}
+              {Array.from({ length: LAYERS }).map((_, i) => {
+                const z = (i / (LAYERS - 1) - 0.5) * THICKNESS;
+                const l = 62 - (i / (LAYERS - 1)) * 24; // top lighter → bottom darker
+                return (
+                  <span
+                    key={i}
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      transform: `translateZ(${z}px)`,
+                      backgroundColor: `hsl(245 8% ${l}%)`,
+                    }}
+                  />
+                );
+              })}
+
+              <CoinFace logo={journeyLogos[frontIndex]} z={THICKNESS / 2 + 0.6} />
+              <CoinFace logo={journeyLogos[backIndex]} z={THICKNESS / 2 + 0.6} back />
             </motion.div>
           </motion.div>
         </div>
@@ -155,32 +174,30 @@ export function CoinSection() {
 
 function CoinFace({
   logo,
-  bodyColor,
+  z,
   back = false,
 }: {
   logo: JourneyLogo;
-  bodyColor: MotionValue<string>;
+  z: number;
   back?: boolean;
 }) {
   return (
-    <motion.div
+    <div
       style={{
-        backgroundColor: bodyColor,
         backfaceVisibility: "hidden",
-        rotateY: back ? 180 : 0,
+        transform: `${back ? "rotateY(180deg) " : ""}translateZ(${z}px)`,
+        background:
+          "radial-gradient(circle at 36% 30%, #fcfbff, #eceaf3 58%, #d4d2e0)",
+        boxShadow:
+          "inset 0 2px 6px rgba(255,255,255,0.7), inset 0 -4px 10px rgba(20,12,40,0.12)",
       }}
-      className="absolute inset-0 grid place-items-center rounded-full border-2 border-white/30 shadow-[0_40px_90px_rgba(20,8,40,0.45),0_0_70px_rgba(124,58,237,0.35)]"
+      className="absolute inset-0 grid place-items-center rounded-full"
     >
-      {/* inner ring */}
-      <span className="pointer-events-none absolute inset-[6%] rounded-full border border-white/20" />
-      {/* white medallion keeps the logo readable in any body colour */}
-      <span className="grid h-[58%] w-[58%] place-items-center rounded-full bg-white shadow-inner">
-        <img
-          src={logo.src}
-          alt={logo.name}
-          className="max-h-[60%] max-w-[78%] object-contain"
-        />
-      </span>
-    </motion.div>
+      <img
+        src={logo.src}
+        alt={logo.name}
+        className="max-h-[46%] max-w-[60%] object-contain [filter:drop-shadow(0_1px_1px_rgba(0,0,0,0.12))]"
+      />
+    </div>
   );
 }
