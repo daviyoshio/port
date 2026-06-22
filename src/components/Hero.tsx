@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useI18n } from "../i18n/LanguageContext";
-import { asset } from "../lib/asset";
 import { EASE } from "../lib/motion";
+import { AvatarCharacter } from "./AvatarCharacter";
 import { RevealText } from "./ui/RevealText";
 
 export function Hero() {
@@ -104,12 +104,7 @@ function ProfileCard({
       transition={{ duration: 0.85, delay: 0.75, ease: EASE }}
       className="mt-12 flex items-center gap-4 rounded-2xl border border-white/60 bg-white/80 p-3 pr-6 shadow-float backdrop-blur-md"
     >
-      <img
-        src={asset("assets/img/capitulo-academico.jpg")}
-        alt={name}
-        loading="lazy"
-        className="h-14 w-14 rounded-xl object-cover object-top"
-      />
+      <AvatarCharacter className="h-16 w-16 shrink-0" />
       <div className="text-left">
         <span className="inline-flex items-center gap-1.5 rounded-pill border border-dashed border-accent/60 px-2 py-0.5 font-mono text-[0.58rem] uppercase tracking-[0.1em] text-accent-ink">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
