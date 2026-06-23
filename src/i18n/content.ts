@@ -317,14 +317,26 @@ const pt: Dictionary = {
     intro:
       "Aqui o portfólio deixa de ser narrativa e vira evidência. Cada projeto combina visão de negócio, execução técnica e dados.",
     items: {
-      tatiart: {
+      perceptron: {
         kicker: "Projeto 01",
+        description:
+          "Solução quantitativa do Hackathon Ibmec Tech 2026 (com FactSet e Databricks) para identificar regimes financeiros (normal, estresse, crise e recuperação) e antecipar mudanças de mercado. Usa LDA/PCA, HMM, ARIMA/Prophet e cadeia de Markov para medir o desvio da normalidade e transformar o sinal em decisão de carteira.",
+        tags: ["Python", "Machine Learning", "Time Series", "Markov", "FactSet", "Databricks"],
+      },
+      vision: {
+        kicker: "Projeto 02",
+        description:
+          "Sistema de precificação dinâmica para competitividade no varejo supermercadista, desenvolvido para a rede Ceya Supermercados em parceria com o Ibmec, em produção na nuvem.",
+        tags: ["Precificação dinâmica", "Python", "React", "Azure", "Varejo"],
+      },
+      tatiart: {
+        kicker: "Projeto 03",
         description:
           "Plataforma web focada em conversão, SEO, captação de leads e internacionalização, conectando front-end, back-end em Java Spring Boot e fundamentos de e-commerce.",
         tags: ["HTML", "CSS", "JavaScript", "Java Spring Boot", "SEO", "i18n"],
       },
       cittamobi: {
-        kicker: "Projeto 02",
+        kicker: "Projeto 04",
         description:
           "Análise estratégica com Python e Power BI usando dados reais e bases externas (geografia, eventos e clima) para identificar padrões de comportamento, mobilidade e demanda.",
         tags: [
@@ -336,13 +348,13 @@ const pt: Dictionary = {
         ],
       },
       aurora: {
-        kicker: "Projeto 03",
+        kicker: "Projeto 05",
         description:
           "Projeto de negócio para o mercado livre de energia, conectando sustentabilidade, estratégia, proposta de valor e inovação, da oportunidade ao pitch.",
         tags: ["Estratégia", "Energia", "Sustentabilidade", "Produto", "Pitch"],
       },
       monevo: {
-        kicker: "Projeto 04",
+        kicker: "Projeto 06",
         description:
           "Conceito de produto para organização financeira pessoal, transformando complexidade em clareza para o usuário, do problema à proposta de valor.",
         tags: ["Fintech", "Produto Digital", "Finanças", "UX", "Estratégia"],
@@ -603,14 +615,26 @@ const en: Dictionary = {
     intro:
       "Here the portfolio stops being narrative and becomes evidence. Each project combines business vision, technical execution and data.",
     items: {
-      tatiart: {
+      perceptron: {
         kicker: "Project 01",
+        description:
+          "A quantitative solution from the Ibmec Tech 2026 Hackathon (with FactSet and Databricks) that identifies financial regimes (normal, stress, crisis and recovery) and anticipates market shifts. It uses LDA/PCA, HMM, ARIMA/Prophet and a Markov chain to measure the deviation from normality and turn the signal into a portfolio decision.",
+        tags: ["Python", "Machine Learning", "Time Series", "Markov", "FactSet", "Databricks"],
+      },
+      vision: {
+        kicker: "Project 02",
+        description:
+          "A dynamic pricing system for competitiveness in supermarket retail, built for the Ceya Supermercados chain in partnership with Ibmec and running in production in the cloud.",
+        tags: ["Dynamic pricing", "Python", "React", "Azure", "Retail"],
+      },
+      tatiart: {
+        kicker: "Project 03",
         description:
           "A web platform focused on conversion, SEO, lead capture and internationalization, connecting front-end, a Java Spring Boot back-end and e-commerce fundamentals.",
         tags: ["HTML", "CSS", "JavaScript", "Java Spring Boot", "SEO", "i18n"],
       },
       cittamobi: {
-        kicker: "Project 02",
+        kicker: "Project 04",
         description:
           "Strategic analysis with Python and Power BI using real and external data (geography, events and weather) to identify behavior, mobility and demand patterns.",
         tags: [
@@ -622,13 +646,13 @@ const en: Dictionary = {
         ],
       },
       aurora: {
-        kicker: "Project 03",
+        kicker: "Project 05",
         description:
           "A business project for the free energy market, connecting sustainability, strategy, value proposition and innovation, from opportunity to pitch.",
         tags: ["Strategy", "Energy", "Sustainability", "Product", "Pitch"],
       },
       monevo: {
-        kicker: "Project 04",
+        kicker: "Project 06",
         description:
           "A product concept for personal financial organization, turning complexity into clarity for the user, from problem to value proposition.",
         tags: ["Fintech", "Digital Product", "Finance", "UX", "Strategy"],
@@ -889,14 +913,26 @@ const es: Dictionary = {
     intro:
       "Aquí el portafolio deja de ser narrativa y se vuelve evidencia. Cada proyecto combina visión de negocio, ejecución técnica y datos.",
     items: {
-      tatiart: {
+      perceptron: {
         kicker: "Proyecto 01",
+        description:
+          "Solución cuantitativa del Hackathon Ibmec Tech 2026 (con FactSet y Databricks) para identificar regímenes financieros (normal, estrés, crisis y recuperación) y anticipar cambios de mercado. Usa LDA/PCA, HMM, ARIMA/Prophet y cadena de Markov para medir la desviación de la normalidad y transformar la señal en decisión de cartera.",
+        tags: ["Python", "Machine Learning", "Time Series", "Markov", "FactSet", "Databricks"],
+      },
+      vision: {
+        kicker: "Proyecto 02",
+        description:
+          "Sistema de precificación dinámica para competitividad en el retail de supermercados, desarrollado para la red Ceya Supermercados en alianza con Ibmec y en producción en la nube.",
+        tags: ["Precificación dinámica", "Python", "React", "Azure", "Retail"],
+      },
+      tatiart: {
+        kicker: "Proyecto 03",
         description:
           "Plataforma web enfocada en conversión, SEO, captación de leads e internacionalización, conectando front-end, back-end en Java Spring Boot y fundamentos de e-commerce.",
         tags: ["HTML", "CSS", "JavaScript", "Java Spring Boot", "SEO", "i18n"],
       },
       cittamobi: {
-        kicker: "Proyecto 02",
+        kicker: "Proyecto 04",
         description:
           "Análisis estratégico con Python y Power BI usando datos reales y bases externas (geografía, eventos y clima) para identificar patrones de comportamiento, movilidad y demanda.",
         tags: [
@@ -908,13 +944,13 @@ const es: Dictionary = {
         ],
       },
       aurora: {
-        kicker: "Proyecto 03",
+        kicker: "Proyecto 05",
         description:
           "Proyecto de negocio para el mercado libre de energía, conectando sostenibilidad, estrategia, propuesta de valor e innovación, de la oportunidad al pitch.",
         tags: ["Estrategia", "Energía", "Sostenibilidad", "Producto", "Pitch"],
       },
       monevo: {
-        kicker: "Proyecto 04",
+        kicker: "Proyecto 06",
         description:
           "Concepto de producto para organización financiera personal, transformando complejidad en claridad para el usuario, del problema a la propuesta de valor.",
         tags: ["Fintech", "Producto Digital", "Finanzas", "UX", "Estrategia"],

@@ -20,6 +20,22 @@ export interface ProjectMeta {
 
 export const projects: ProjectMeta[] = [
   {
+    id: "perceptron",
+    title: "Perceptron",
+    image: asset("assets/img/projeto-perceptron.jpg"),
+    alt: "Capa do projeto Perceptron — identificação de regimes financeiros",
+    deckUrl: asset("assets/decks/perceptron.pdf"),
+    // codeUrl: "https://github.com/...",
+  },
+  {
+    id: "vision",
+    title: "Vision",
+    image: asset("assets/img/projeto-vision.jpg"),
+    alt: "Capa do projeto Vision — inteligência de preços para o varejo",
+    deckUrl: asset("assets/decks/vision.pdf"),
+    // liveUrl: "https://...",
+  },
+  {
     id: "tatiart",
     title: "Tatiart",
     image: asset("assets/img/projeto-tatiart.jpg"),
