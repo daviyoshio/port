@@ -3,7 +3,7 @@ import { useI18n } from "../i18n/LanguageContext";
 import { Reveal } from "./ui/Reveal";
 import { RevealText } from "./ui/RevealText";
 
-/** Full-bleed closing on a mirrored purple gradient: contact + footer in one. */
+/** Full-bleed closing on a white-to-graphite gradient: contact + footer in one. */
 export function ContactSection() {
   const { t } = useI18n();
   const year = new Date().getFullYear();

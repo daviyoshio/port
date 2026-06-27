@@ -43,7 +43,7 @@ export function CoinSection() {
   const bg = useTransform(
     scrollYProgress,
     [0, 0.45, 1],
-    ["#ffffff", "#0b0716", "#f7f6fb"],
+    ["#ffffff", "#0a0a0a", "#f5f5f7"],
   );
 
   const [segment, setSegment] = useState(0);
@@ -62,7 +62,7 @@ export function CoinSection() {
           {journeyLogos.map((logo) => (
             <div
               key={logo.name}
-              className="grid h-36 w-36 place-items-center rounded-full bg-[radial-gradient(circle_at_36%_30%,#fcfbff,#e9e8f1_60%,#d2d0de)] shadow-soft"
+              className="grid h-36 w-36 place-items-center rounded-full bg-[radial-gradient(circle_at_36%_30%,#ffffff,#f0f0f2_60%,#d8d8dd)] shadow-soft"
             >
               <img
                 src={logo.src}
@@ -107,7 +107,7 @@ export function CoinSection() {
                     className="absolute inset-0 rounded-full"
                     style={{
                       transform: `translateZ(${z}px)`,
-                      backgroundColor: `hsl(245 8% ${l}%)`,
+                      backgroundColor: `hsl(240 4% ${l}%)`,
                     }}
                   />
                 );
@@ -138,9 +138,9 @@ function CoinFace({
         backfaceVisibility: "hidden",
         transform: `${back ? "rotateY(180deg) " : ""}translateZ(${z}px)`,
         background:
-          "radial-gradient(circle at 36% 30%, #fcfbff, #eceaf3 58%, #d4d2e0)",
+          "radial-gradient(circle at 36% 30%, #ffffff, #f0f0f2 58%, #d8d8dd)",
         boxShadow:
-          "inset 0 2px 6px rgba(255,255,255,0.7), inset 0 -4px 10px rgba(20,12,40,0.12)",
+          "inset 0 2px 6px rgba(255,255,255,0.7), inset 0 -4px 10px rgba(0,0,0,0.12)",
       }}
       className="absolute inset-0 grid place-items-center rounded-full"
     >

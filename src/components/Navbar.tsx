@@ -5,7 +5,6 @@ import { useI18n } from "../i18n/LanguageContext";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 import { Clock } from "./Clock";
 import { LanguageSwitch } from "./LanguageSwitch";
-import { Barcode } from "./Preloader";
 
 const SECTION_IDS = [
   "inicio",
@@ -54,8 +53,13 @@ export function Navbar() {
           className="flex shrink-0 items-center gap-2.5 rounded-full px-1.5 py-1"
           aria-label="Davi Yoshio — início"
         >
-          <Barcode className="h-3.5" />
-          <span className="font-mono text-[0.8rem] font-medium uppercase tracking-[0.06em] text-ink">
+          <span
+            aria-hidden
+            className="grid h-6 w-6 place-items-center rounded-[7px] bg-ink text-[0.58rem] font-semibold tracking-[0.02em] text-white"
+          >
+            DY
+          </span>
+          <span className="text-[0.92rem] font-semibold tracking-[-0.01em] text-ink">
             Davi Yoshio
           </span>
         </a>
