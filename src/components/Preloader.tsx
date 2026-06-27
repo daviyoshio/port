@@ -2,45 +2,44 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { EASE } from "../lib/motion";
 
-const PHRASE = "Hello, World";
-
 /**
- * Apple/developer-style intro: on a clean off-white canvas, a line of SF Mono
- * types out "Hello, World" with a blinking caret, then fades fluidly into the
- * page. Shows once per tab session, skipped under prefers-reduced-motion.
+ * Full-screen intro overlay with a 0 to 100 counter (Doto font) over a purple
+ * barcode mark, then fades out to reveal the page. Shows once per tab session
+ * and is skipped entirely under prefers-reduced-motion.
  */
 export function Preloader() {
   const reduce = useReducedMotion();
-  const [typed, setTyped] = useState(0);
+  const [count, setCount] = useState(0);
   const [done, setDone] = useState(false);
 
-  // Type the phrase out, character by character.
   useEffect(() => {
-    if (reduce || sessionStorage.getItem("preloaded")) {
+    if (reduce) {
+      setDone(true);
+      return;
+    }
+    if (sessionStorage.getItem("preloaded")) {
       setDone(true);
       return;
     }
     const id = setInterval(() => {
-      setTyped((v) => {
-        if (v >= PHRASE.length) {
+      setCount((v) => {
+        if (v >= 100) {
           clearInterval(id);
-          return v;
+          return 100;
         }
-        return v + 1;
+        return Math.min(v + 2, 100);
       });
-    }, 78);
+    }, 18);
     return () => clearInterval(id);
   }, [reduce]);
 
-  // Hold briefly once fully typed, then dismiss.
   useEffect(() => {
-    if (typed >= PHRASE.length) {
-      const t = setTimeout(() => setDone(true), 620);
+    if (count >= 100) {
+      const t = setTimeout(() => setDone(true), 320);
       return () => clearTimeout(t);
     }
-  }, [typed]);
+  }, [count]);
 
-  // Lock scroll while the overlay is up.
   useEffect(() => {
     if (done) {
       sessionStorage.setItem("preloaded", "1");
@@ -59,33 +58,35 @@ export function Preloader() {
     <AnimatePresence>
       {!done && (
         <motion.div
-          className="fixed inset-0 z-[100] grid place-items-center bg-[#fbfbfd]"
+          className="fixed inset-0 z-[100] grid place-items-center bg-[#0a0a0a]"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.7, ease: EASE }}
+          transition={{ duration: 0.6, ease: EASE }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="flex items-center font-mono text-[clamp(1.6rem,5vw,2.6rem)] font-medium tracking-[-0.01em] text-ink"
-          >
-            <span className="mr-3 select-none text-faint">{"›"}</span>
-            <span>{PHRASE.slice(0, typed)}</span>
-            <motion.span
-              aria-hidden
-              className="ml-0.5 inline-block h-[1.05em] w-[2px] translate-y-[0.12em] bg-accent"
-              animate={{ opacity: [1, 1, 0, 0] }}
-              transition={{
-                duration: 0.9,
-                times: [0, 0.5, 0.5, 1],
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          </motion.div>
+          <div className="flex flex-col items-center gap-7">
+            <Barcode />
+            <span className="font-doto text-[2.6rem] font-bold tabular-nums text-accent">
+              ({String(count).padStart(3, "0")})
+            </span>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+/** Vertical-bar "barcode" mark used as the brand glyph. */
+export function Barcode({ className = "h-9" }: { className?: string }) {
+  const bars = [3, 1, 2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 2];
+  return (
+    <div className={`flex items-stretch gap-[3px] ${className}`}>
+      {bars.map((w, i) => (
+        <span
+          key={i}
+          style={{ width: w * 2 }}
+          className="block rounded-[1px] bg-accent"
+        />
+      ))}
+    </div>
   );
 }
