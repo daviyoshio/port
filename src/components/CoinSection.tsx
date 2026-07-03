@@ -79,7 +79,7 @@ export function CoinSection() {
   }
 
   return (
-    <section id="moeda" ref={ref} className="relative h-[200vh]">
+    <section id="moeda" ref={ref} className="relative h-[260vh]">
       {/* The coin itself is decorative; expose the institutions to AT. */}
       <p className="sr-only">
         {journeyLogos.map((l) => `${l.name} — ${l.role}`).join(" · ")}
