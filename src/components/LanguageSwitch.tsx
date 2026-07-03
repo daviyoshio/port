@@ -19,7 +19,7 @@ export function LanguageSwitch() {
             type="button"
             onClick={() => setLang(l)}
             aria-pressed={active}
-            className={`rounded-pill px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-200 ${
+            className={`rounded-pill px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.08em] transition-colors duration-200 sm:px-2.5 sm:py-1 ${
               active ? "bg-ink text-white" : "text-muted hover:text-ink"
             }`}
           >

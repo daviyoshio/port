@@ -92,7 +92,6 @@ export interface Dictionary {
     liveLabel: string;
     codeLabel: string;
     deckLabel: string;
-    soonLabel: string;
   };
 
   skills: {
@@ -355,7 +354,6 @@ const pt: Dictionary = {
     liveLabel: "Ver projeto",
     codeLabel: "Ver código",
     deckLabel: "Ver apresentação",
-    soonLabel: "Em breve",
   },
 
   skills: {
@@ -649,7 +647,6 @@ const en: Dictionary = {
     liveLabel: "View project",
     codeLabel: "View code",
     deckLabel: "View deck",
-    soonLabel: "Coming soon",
   },
 
   skills: {
@@ -943,7 +940,6 @@ const es: Dictionary = {
     liveLabel: "Ver proyecto",
     codeLabel: "Ver código",
     deckLabel: "Ver presentación",
-    soonLabel: "Próximamente",
   },
 
   skills: {

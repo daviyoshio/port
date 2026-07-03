@@ -42,7 +42,7 @@ export function ImpactStats() {
                 locale={locale}
               />
             </span>
-            <span className="font-mono text-[0.78rem] uppercase leading-snug tracking-[0.04em] text-white/55">
+            <span className="font-mono text-[0.78rem] uppercase leading-snug tracking-[0.04em] text-white/70">
               {stat.label}
             </span>
           </Reveal>
@@ -62,7 +62,7 @@ export function ImpactStats() {
               <Spark />
             </div>
             <h3 className="text-[1.1rem] font-semibold text-white">{ev.title}</h3>
-            <p className="mt-2 text-[0.92rem] leading-relaxed text-white/60">
+            <p className="mt-2 text-[0.92rem] leading-relaxed text-white/70">
               {ev.description}
             </p>
           </Reveal>

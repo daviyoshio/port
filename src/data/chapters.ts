@@ -15,37 +15,37 @@ export interface ChapterMeta {
 export const chapters: ChapterMeta[] = [
   {
     id: "origem",
-    image: asset("assets/img/capitulo-origem.jpg"),
+    image: asset("assets/img/capitulo-origem.webp"),
     alt: "Início em vendas, empreendedorismo e e-commerce",
     side: "right",
   },
   {
     id: "operacao",
-    image: asset("assets/img/capitulo-operacao.jpg"),
+    image: asset("assets/img/capitulo-operacao.webp"),
     alt: "Rotina corporativa e operação na Yamá Cosméticos",
     side: "left",
   },
   {
     id: "lideranca",
-    image: asset("assets/img/capitulo-lideranca.jpg"),
+    image: asset("assets/img/capitulo-lideranca.webp"),
     alt: "Liderança e crescimento da operação de e-commerce",
     side: "right",
   },
   {
     id: "virada",
-    image: asset("assets/img/capitulo-virada.jpg"),
+    image: asset("assets/img/capitulo-virada.webp"),
     alt: "A virada para dados e inteligência artificial",
     side: "left",
   },
   {
     id: "academico",
-    image: asset("assets/img/capitulo-academico.jpg"),
+    image: asset("assets/img/capitulo-academico.webp"),
     alt: "Formação em Ciência de Dados e IA, hackathons e projetos",
     side: "right",
   },
   {
     id: "pagbank",
-    image: asset("assets/img/capitulo-pagbank.jpeg"),
+    image: asset("assets/img/capitulo-pagbank.webp"),
     alt: "Davi Yoshio no PagBank, atuando em Data & AI",
     side: "left",
   },

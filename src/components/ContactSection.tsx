@@ -81,7 +81,7 @@ export function ContactSection() {
                   : {})}
                 className="flex flex-col gap-1"
               >
-                <span className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-white/60">
+                <span className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-white/75">
                   {c.label}
                 </span>
                 <span className="break-words font-mono text-[0.95rem] text-white">

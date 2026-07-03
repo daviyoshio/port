@@ -19,11 +19,11 @@
   --color-canvas-alt: #f0eef8;
   --color-surface: #ffffff;
 
-  /* Ink */
+  /* Ink — muted/faint tuned for WCAG AA on white */
   --color-ink: #0a0a0a;
   --color-ink-soft: #3a3a3a;
-  --color-muted: #8a8a8a;
-  --color-faint: #a8a8a8;
+  --color-muted: #6e6e73;
+  --color-faint: #86868b;
 
   /* Lines — subtle, Apple keeps borders almost invisible */
   --color-hairline: rgba(0, 0, 0, 0.06);
@@ -33,7 +33,6 @@
   --color-accent: #7c3aed;
   --color-accent-ink: #6024d6;
   --color-accent-soft: #f1ebfe;
-  --color-tag-bg: #f2f2f2;
 
   /* Radius — Apple's measured corner scale (sm 8 · lg 18 · pill) */
   --radius-pill: 999px;

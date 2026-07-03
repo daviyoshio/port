@@ -33,10 +33,10 @@ export function Hero() {
         </motion.span>
 
         <h1 className="mt-7 text-[clamp(2.7rem,7vw,5.2rem)] leading-[1.04] text-white">
-          <RevealText text={t.hero.headlineLead} />{" "}
+          <RevealText text={t.hero.headlineLead} className="text-white/[0.84]" />{" "}
           <RevealText
             text={t.hero.headlineAccent}
-            className="bg-gradient-to-r from-white via-[#e6d9fc] to-[#c8abf5] bg-clip-text text-transparent"
+            className="text-white"
             delay={leadWords * 0.04}
           />
         </h1>

@@ -22,7 +22,7 @@ export const projects: ProjectMeta[] = [
   {
     id: "perceptron",
     title: "Perceptron",
-    image: asset("assets/img/projeto-perceptron.jpg"),
+    image: asset("assets/img/projeto-perceptron.webp"),
     alt: "Capa do projeto Perceptron — identificação de regimes financeiros",
     deckUrl: asset("assets/decks/perceptron.pdf"),
     // codeUrl: "https://github.com/...",
@@ -30,7 +30,7 @@ export const projects: ProjectMeta[] = [
   {
     id: "vision",
     title: "Vision",
-    image: asset("assets/img/projeto-vision.jpg"),
+    image: asset("assets/img/projeto-vision.webp"),
     alt: "Capa do projeto Vision — inteligência de preços para o varejo",
     deckUrl: asset("assets/decks/vision.pdf"),
     // liveUrl: "https://...",
@@ -38,7 +38,7 @@ export const projects: ProjectMeta[] = [
   {
     id: "tatiart",
     title: "Tatiart",
-    image: asset("assets/img/projeto-tatiart.jpg"),
+    image: asset("assets/img/projeto-tatiart.webp"),
     alt: "Plataforma web Tatiart focada em conversão e SEO",
     // liveUrl: "https://...",
     // codeUrl: "https://github.com/...",
@@ -46,7 +46,7 @@ export const projects: ProjectMeta[] = [
   {
     id: "cittamobi",
     title: "Cittamobi",
-    image: asset("assets/img/projeto-cittamobi.jpg"),
+    image: asset("assets/img/projeto-cittamobi.webp"),
     alt: "Análise de dados e dashboards do projeto Cittamobi",
     // codeUrl: "https://github.com/...",
     // deckUrl: "https://...",
@@ -54,14 +54,14 @@ export const projects: ProjectMeta[] = [
   {
     id: "aurora",
     title: "Aurora Viridis",
-    image: asset("assets/img/projeto-aurora-viridis.jpg"),
+    image: asset("assets/img/projeto-aurora-viridis.webp"),
     alt: "Projeto de negócio Aurora Viridis para o mercado de energia",
     // deckUrl: "https://...",
   },
   {
     id: "monevo",
     title: "Monevo",
-    image: asset("assets/img/projeto-monevo.jpg"),
+    image: asset("assets/img/projeto-monevo.webp"),
     alt: "Conceito de produto Monevo para organização financeira",
     // deckUrl: "https://...",
   },

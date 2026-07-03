@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { EASE } from "../lib/motion";
+import { profile } from "../data/profile";
 import { useI18n } from "../i18n/LanguageContext";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 import { Clock } from "./Clock";
@@ -98,13 +99,22 @@ export function Navbar() {
             className="hidden xl:inline-flex"
           />
           <LanguageSwitch />
+          <a
+            href={profile.cv}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t.contact.ctaCV}
+            className="hidden items-center rounded-pill bg-ink px-3.5 py-1.5 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-white transition-colors duration-300 hover:bg-accent sm:inline-flex"
+          >
+            CV
+          </a>
           {/* Mobile menu toggle */}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={t.menuLabel}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-hairline bg-surface text-ink lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-surface text-ink lg:hidden"
           >
             <Burger open={open} />
           </button>
@@ -137,6 +147,17 @@ export function Navbar() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={profile.cv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="mt-1 block rounded-2xl bg-ink px-4 py-3 text-center text-[1rem] font-semibold text-white"
+                >
+                  {t.contact.ctaCV}
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}

@@ -45,7 +45,7 @@ export function CoinSection() {
   const bg = useTransform(
     scrollYProgress,
     [0, 0.45, 1],
-    ["#ffffff", "#0b0716", "#f7f6fb"],
+    ["#ffffff", "#0b0716", "#f0eef8"],
   );
 
   const [segment, setSegment] = useState(0);
@@ -79,7 +79,11 @@ export function CoinSection() {
   }
 
   return (
-    <section id="moeda" ref={ref} className="relative h-[280vh]">
+    <section id="moeda" ref={ref} className="relative h-[200vh]">
+      {/* The coin itself is decorative; expose the institutions to AT. */}
+      <p className="sr-only">
+        {journeyLogos.map((l) => `${l.name} — ${l.role}`).join(" · ")}
+      </p>
       <motion.div
         style={{ backgroundColor: bg }}
         className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-6"

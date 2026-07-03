@@ -124,7 +124,7 @@ function CertCard({ cert, viewLabel }: { cert: Certificate; viewLabel: string })
           {cert.skills.map((s) => (
             <li
               key={s}
-              className="rounded-pill bg-[var(--color-tag-bg)] px-2.5 py-1 font-mono text-[0.62rem] uppercase tracking-[0.04em] text-muted"
+              className="rounded-pill border border-hairline bg-surface px-2.5 py-1 font-mono text-[0.62rem] uppercase tracking-[0.04em] text-muted"
             >
               {s}
             </li>

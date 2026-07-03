@@ -9,8 +9,9 @@ export function Tag({
   tone?: "default" | "accent";
 }) {
   const tones = {
-    default: "bg-[var(--color-tag-bg)] text-ink-soft",
-    accent: "bg-accent-soft text-accent-ink",
+    // White + hairline stays visible on both white and off-white sections.
+    default: "border border-hairline bg-surface text-ink-soft",
+    accent: "border border-transparent bg-accent-soft text-accent-ink",
   } as const;
 
   return (

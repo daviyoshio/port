@@ -27,7 +27,7 @@ export function SectionHeading({
   return (
     <div className={`flex flex-col gap-5 ${alignment}`}>
       <Reveal y={0}>
-        <span className={`eyebrow ${dark ? "text-white/60" : ""}`}>
+        <span className={`eyebrow ${dark ? "text-white/70" : ""}`}>
           <span className="h-px w-6 bg-accent/70" aria-hidden />
           {eyebrow}
         </span>

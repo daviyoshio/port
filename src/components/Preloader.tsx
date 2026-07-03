@@ -17,7 +17,9 @@ export function Preloader() {
       setDone(true);
       return;
     }
-    if (sessionStorage.getItem("preloaded")) {
+    // Show at most once a day — returning visitors go straight to content.
+    const last = Number(localStorage.getItem("preloader-at") || 0);
+    if (Date.now() - last < 24 * 60 * 60 * 1000) {
       setDone(true);
       return;
     }
@@ -27,22 +29,22 @@ export function Preloader() {
           clearInterval(id);
           return 100;
         }
-        return Math.min(v + 2, 100);
+        return Math.min(v + 4, 100);
       });
-    }, 18);
+    }, 14);
     return () => clearInterval(id);
   }, [reduce]);
 
   useEffect(() => {
     if (count >= 100) {
-      const t = setTimeout(() => setDone(true), 320);
+      const t = setTimeout(() => setDone(true), 240);
       return () => clearTimeout(t);
     }
   }, [count]);
 
   useEffect(() => {
     if (done) {
-      sessionStorage.setItem("preloaded", "1");
+      localStorage.setItem("preloader-at", String(Date.now()));
       document.body.style.overflow = "";
     } else if (!reduce) {
       document.body.style.overflow = "hidden";
