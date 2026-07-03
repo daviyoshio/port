@@ -48,7 +48,7 @@ export function ContactSection() {
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <a
               href={`mailto:${profile.email}`}
-              className="group inline-flex items-center gap-2 rounded-pill bg-white px-6 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-ink transition-transform duration-300 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-pill bg-white px-6 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-ink transition-transform duration-300 hover:-translate-y-0.5 active:scale-[0.97]"
             >
               {t.contact.ctaEmail}
               <span className="transition-transform duration-300 group-hover:translate-x-0.5">
@@ -59,7 +59,7 @@ export function ContactSection() {
               href={profile.cv}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-pill border border-white/40 bg-white/10 px-6 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white/20"
+              className="inline-flex items-center rounded-pill border border-white/40 bg-white/10 px-6 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition duration-300 hover:bg-white/20 active:scale-[0.97]"
             >
               {t.contact.ctaCV}
             </a>

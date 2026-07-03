@@ -36,7 +36,7 @@ export function Hero() {
           <RevealText text={t.hero.headlineLead} />{" "}
           <RevealText
             text={t.hero.headlineAccent}
-            className="italic text-white/95"
+            className="bg-gradient-to-r from-white via-[#e6d9fc] to-[#c8abf5] bg-clip-text text-transparent"
             delay={leadWords * 0.04}
           />
         </h1>
@@ -58,7 +58,7 @@ export function Hero() {
         >
           <a
             href="#trajetoria"
-            className="group inline-flex items-center gap-2 rounded-pill bg-white px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-ink transition-transform duration-300 hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-pill bg-white px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-ink transition-transform duration-300 hover:-translate-y-0.5 active:scale-[0.97]"
           >
             {t.hero.ctaJourney}
             <span className="transition-transform duration-300 group-hover:translate-x-0.5">
@@ -67,13 +67,13 @@ export function Hero() {
           </a>
           <a
             href="#projetos"
-            className="inline-flex items-center gap-2 rounded-pill border border-white/35 bg-white/10 px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white/20"
+            className="inline-flex items-center gap-2 rounded-pill border border-white/35 bg-white/10 px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition duration-300 hover:bg-white/20 active:scale-[0.97]"
           >
             {t.hero.ctaProjects}
           </a>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 rounded-pill border border-white/35 bg-white/10 px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white/20"
+            className="inline-flex items-center gap-2 rounded-pill border border-white/35 bg-white/10 px-5 py-3 font-mono text-[0.78rem] font-medium uppercase tracking-[0.06em] text-white backdrop-blur-sm transition duration-300 hover:bg-white/20 active:scale-[0.97]"
           >
             {t.hero.ctaContact}
           </a>

@@ -40,6 +40,8 @@ export function CoinSection() {
   const coinOpacity = useTransform(scrollYProgress, [0, 0.07, 0.9, 1], [0, 1, 1, 0]);
 
   // Screen darkens through the middle, back to light to meet the next section.
+  // End colour must equal --color-canvas-alt so the handoff to the story
+  // section is seamless.
   const bg = useTransform(
     scrollYProgress,
     [0, 0.45, 1],

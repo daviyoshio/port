@@ -16,11 +16,12 @@ export function ImpactStats() {
   const locale = LOCALES[lang];
 
   return (
-    <Section id="impacto">
+    <Section id="impacto" className="bg-[#15111e] text-white">
       <SectionHeading
         eyebrow={t.impact.eyebrow}
         title={t.impact.title}
         intro={t.impact.intro}
+        tone="dark"
       />
 
       {/* Metric cards */}
@@ -30,9 +31,9 @@ export function ImpactStats() {
             key={stat.label}
             delay={i * 0.08}
             blur={5}
-            className="surface-card flex flex-col gap-3 rounded-panel p-6 transition-transform duration-300 hover:-translate-y-1"
+            className="flex flex-col gap-3 rounded-panel border border-white/10 bg-white/[0.04] p-6 transition-transform duration-300 hover:-translate-y-1"
           >
-            <span className="font-doto text-[clamp(2.4rem,4.6vw,3.4rem)] font-bold leading-none text-ink">
+            <span className="text-[clamp(2.4rem,4.6vw,3.4rem)] font-bold leading-none tabular-nums text-white">
               <Counter
                 value={stat.value}
                 decimals={stat.decimals}
@@ -41,7 +42,7 @@ export function ImpactStats() {
                 locale={locale}
               />
             </span>
-            <span className="font-mono text-[0.78rem] uppercase leading-snug tracking-[0.04em] text-muted">
+            <span className="font-mono text-[0.78rem] uppercase leading-snug tracking-[0.04em] text-white/55">
               {stat.label}
             </span>
           </Reveal>
@@ -55,13 +56,13 @@ export function ImpactStats() {
             key={ev.title}
             delay={i * 0.08}
             blur={5}
-            className="group relative overflow-hidden rounded-panel border border-hairline bg-gradient-to-b from-accent-soft/50 to-surface p-6"
+            className="group relative overflow-hidden rounded-panel border border-white/10 bg-white/[0.04] p-6"
           >
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-ink text-white">
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-white">
               <Spark />
             </div>
-            <h3 className="text-[1.1rem] font-semibold text-ink">{ev.title}</h3>
-            <p className="mt-2 text-[0.92rem] leading-relaxed text-muted">
+            <h3 className="text-[1.1rem] font-semibold text-white">{ev.title}</h3>
+            <p className="mt-2 text-[0.92rem] leading-relaxed text-white/60">
               {ev.description}
             </p>
           </Reveal>

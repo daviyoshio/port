@@ -22,5 +22,12 @@ dist-ssr
 # Local tooling
 .claude/
 
+# Local reference docs & source assets (not part of the site)
+/spec.md
+/DESIGN.md
+/DESIGN-apple.md
+/logos/
+/Curriculo.pdf
+
 # Misc
 *.tsbuildinfo

@@ -12,7 +12,7 @@ interface ButtonLinkProps {
 }
 
 const base =
-  "group inline-flex items-center justify-center gap-2 rounded-pill px-5 py-3 text-[0.95rem] font-semibold transition-all duration-300 ease-out will-change-transform hover:-translate-y-0.5 focus-visible:-translate-y-0.5";
+  "group inline-flex items-center justify-center gap-2 rounded-pill px-5 py-3 text-[0.95rem] font-semibold transition-all duration-300 ease-out will-change-transform hover:-translate-y-0.5 focus-visible:-translate-y-0.5 active:scale-[0.97]";
 
 const variants: Record<Variant, string> = {
   primary: "bg-ink text-white shadow-soft hover:bg-accent hover:shadow-lift",

@@ -6,16 +6,17 @@
    restrained indigo accent, soft hairlines and layered shadows.
    ========================================================================= */
 @theme {
-  /* Type — editorial serif headlines, Geist body, mono labels, Doto counters */
-  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-doto: "Doto", "Geist Mono", ui-monospace, monospace;
+  /* Type — Apple system stack: real SF Pro on Apple devices, Inter elsewhere.
+     All roles share one face (Apple uses a single sans across the UI). */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", system-ui,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-sans);
+  --font-mono: var(--font-sans);
+  --font-doto: var(--font-sans);
 
   /* Surfaces */
   --color-canvas: #ffffff;
-  --color-canvas-alt: #f7f6fb;
+  --color-canvas-alt: #f0eef8;
   --color-surface: #ffffff;
 
   /* Ink */
@@ -24,9 +25,9 @@
   --color-muted: #8a8a8a;
   --color-faint: #a8a8a8;
 
-  /* Lines */
-  --color-hairline: #e6e6e6;
-  --color-hairline-strong: #d6d6d6;
+  /* Lines — subtle, Apple keeps borders almost invisible */
+  --color-hairline: rgba(0, 0, 0, 0.06);
+  --color-hairline-strong: rgba(0, 0, 0, 0.1);
 
   /* Accent — vibrant purple (replaces the reference's orange) */
   --color-accent: #7c3aed;
@@ -34,18 +35,16 @@
   --color-accent-soft: #f1ebfe;
   --color-tag-bg: #f2f2f2;
 
-  /* Radius (custom names so Tailwind defaults like rounded-lg stay intact) */
+  /* Radius — Apple's measured corner scale (sm 8 · lg 18 · pill) */
   --radius-pill: 999px;
-  --radius-card: 24px;
-  --radius-panel: 28px;
-  --radius-hero: 34px;
+  --radius-card: 18px;
+  --radius-panel: 22px;
+  --radius-hero: 28px;
 
-  /* Shadows — very soft, layered */
-  --shadow-soft: 0 1px 2px rgba(17, 17, 26, 0.04),
-    0 8px 24px rgba(17, 17, 26, 0.05);
-  --shadow-lift: 0 2px 4px rgba(17, 17, 26, 0.04),
-    0 18px 40px rgba(17, 17, 26, 0.1);
-  --shadow-float: 0 24px 60px rgba(17, 17, 26, 0.14);
+  /* Shadows — a single soft, wide, diffused shadow (Apple "studio light") */
+  --shadow-soft: 0 4px 20px rgba(17, 12, 40, 0.06);
+  --shadow-lift: 0 8px 32px rgba(17, 12, 40, 0.1);
+  --shadow-float: 0 14px 46px rgba(17, 12, 40, 0.16);
 
   /* Layout */
   --container-page: 1200px;
@@ -70,6 +69,8 @@
     font-family: var(--font-sans);
     background-color: var(--color-canvas);
     color: var(--color-ink);
+    /* Apple tracks text tight at every size, not just headlines */
+    letter-spacing: -0.011em;
     overflow-x: hidden;
   }
 
@@ -78,16 +79,15 @@
     color: #fff;
   }
 
-  /* Editorial serif headlines (Instrument Serif, single 400 weight). */
+  /* Apple-style headlines: sans, weight 600, tight negative tracking. */
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    letter-spacing: -0.005em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.022em;
     text-wrap: balance;
-    font-synthesis-weight: none;
   }
 
   a {

@@ -15,7 +15,7 @@ export function Section({ id, children, className = "", alt, ariaLabel }: Sectio
     <section
       id={id}
       aria-label={ariaLabel}
-      className={`scroll-mt-24 py-24 sm:py-28 lg:py-32 ${alt ? "bg-canvas-alt" : ""} ${className}`}
+      className={`scroll-mt-24 py-28 sm:py-32 lg:py-40 ${alt ? "bg-canvas-alt" : ""} ${className}`}
     >
       <div className="mx-auto w-full max-w-[var(--container-page)] px-6 sm:px-8">
         {children}
