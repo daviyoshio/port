@@ -429,12 +429,32 @@
       gap: 18px;
     }
 
+    /* Card em destaque: ocupa a linha inteira, imagem e texto lado a lado. */
+    .project-card.featured {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      grid-template-rows: minmax(340px, auto);
+      gap: 26px;
+    }
+
+    .project-card.featured .project-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .project-image {
       border-radius: 22px;
       overflow: hidden;
       position: relative;
       border: 1px solid rgba(255,255,255,0.08);
       background: #0a0a0a;
+    }
+
+    .project-image picture {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .project-image img {
@@ -661,6 +681,12 @@
         grid-template-columns: 1fr;
       }
 
+      .project-card.featured {
+        grid-template-columns: 1fr;
+        grid-template-rows: 280px auto;
+        gap: 18px;
+      }
+
       .certificates-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -711,7 +737,8 @@
         padding: 14px;
       }
 
-      .project-card {
+      .project-card,
+      .project-card.featured {
         grid-template-rows: 220px auto;
       }
 
@@ -1075,6 +1102,31 @@
                 <span class="skill" data-i18n="projetos.monevo.skill2">Estratégia</span>
                 <span class="skill" data-i18n="projetos.monevo.skill3">Finanças</span>
                 <span class="skill" data-i18n="projetos.monevo.skill4">Inovação</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card featured reveal">
+            <div class="project-image">
+                <!-- Recorte vertical no layout lado a lado; horizontal quando o card empilha. -->
+                <picture>
+                  <source media="(min-width: 1081px)" srcset="assets/img/projeto-ninho-tall.jpg" />
+                  <img src="assets/img/projeto-ninho.jpg" alt="Painel do sistema Ninho com indicadores de produção, ração e pedidos" />
+                </picture>
+            </div>
+            <div class="project-body">
+              <div class="project-kicker" data-i18n="projetos.ninho.kicker">Projeto 05 · Em produção</div>
+              <h3 data-i18n="projetos.ninho.title">Ninho · Gestão de Granja</h3>
+              <p data-i18n="projetos.ninho.body">
+                Sistema completo de gestão para uma granja de postura real, usado no dia a dia por quem não é da área técnica. Cobre produção, estoque de ovos com FIFO por validade, projeção de ração, pedidos e uma base de clientes segmentada por RFV. O destaque é o Modo Entrega, que monta a rota do dia com distância e tempo reais de estrada (OSRM + 2-opt). Rodando em produção como PWA, com custo de infraestrutura zero.
+              </p>
+              <div class="skills-wrap">
+                <span class="skill">Next.js</span>
+                <span class="skill">Supabase · Postgres</span>
+                <span class="skill">PWA</span>
+                <span class="skill" data-i18n="projetos.ninho.skill4">Roteirização</span>
+                <span class="skill" data-i18n="projetos.ninho.skill5">Segmentação RFV</span>
+                <span class="skill" data-i18n="projetos.ninho.skill6">Produto de ponta a ponta</span>
               </div>
             </div>
           </article>

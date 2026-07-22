@@ -97,6 +97,13 @@
       'projetos.monevo.skill3': 'Finanças',
       'projetos.monevo.skill4': 'Inovação',
 
+      'projetos.ninho.kicker': 'Projeto 05 · Em produção',
+      'projetos.ninho.title': 'Ninho · Gestão de Granja',
+      'projetos.ninho.body': 'Sistema completo de gestão para uma granja de postura real, usado no dia a dia por quem não é da área técnica. Cobre produção, estoque de ovos com FIFO por validade, projeção de ração, pedidos e uma base de clientes segmentada por RFV. O destaque é o Modo Entrega, que monta a rota do dia com distância e tempo reais de estrada (OSRM + 2-opt). Rodando em produção como PWA, com custo de infraestrutura zero.',
+      'projetos.ninho.skill4': 'Roteirização',
+      'projetos.ninho.skill5': 'Segmentação RFV',
+      'projetos.ninho.skill6': 'Produto de ponta a ponta',
+
       'certificados.eyebrow': 'Certificados',
       'certificados.title': 'Formação contínua em dados, IA e negócios.',
       'certificados.intro': 'Cada certificado representa uma camada de aprofundamento técnico ou estratégico que sustenta minha forma de trabalhar. Da engenharia de dados ao branding, passando por machine learning, qualidade de processos e desenvolvimento socioemocional.',
@@ -205,6 +212,13 @@
       'projetos.monevo.skill3': 'Finance',
       'projetos.monevo.skill4': 'Innovation',
 
+      'projetos.ninho.kicker': 'Project 05 · In production',
+      'projetos.ninho.title': 'Ninho · Poultry Farm Management',
+      'projetos.ninho.body': 'A complete management system for a real laying-hen farm, used daily by non-technical people. It covers production, egg inventory with FIFO by expiry date, feed forecasting, orders and a customer base segmented by RFM. The highlight is Delivery Mode, which builds the daily route using real road distance and time (OSRM + 2-opt). Running in production as a PWA, with zero infrastructure cost.',
+      'projetos.ninho.skill4': 'Route optimization',
+      'projetos.ninho.skill5': 'RFM segmentation',
+      'projetos.ninho.skill6': 'End-to-end product',
+
       'certificados.eyebrow': 'Certificates',
       'certificados.title': 'Continuous learning in data, AI and business.',
       'certificados.intro': 'Each certificate represents a layer of technical or strategic depth that supports the way I work. From data engineering to branding, through machine learning, process quality and socio-emotional development.',
@@ -312,6 +326,13 @@
       'projetos.monevo.skill2': 'Estrategia',
       'projetos.monevo.skill3': 'Finanzas',
       'projetos.monevo.skill4': 'Innovación',
+
+      'projetos.ninho.kicker': 'Proyecto 05 · En producción',
+      'projetos.ninho.title': 'Ninho · Gestión de Granja',
+      'projetos.ninho.body': 'Sistema completo de gestión para una granja de postura real, usado a diario por personas sin perfil técnico. Cubre producción, stock de huevos con FIFO por caducidad, proyección de alimento, pedidos y una base de clientes segmentada por RFM. Lo más destacado es el Modo Entrega, que arma la ruta del día con distancia y tiempo reales de carretera (OSRM + 2-opt). En producción como PWA, con costo de infraestructura cero.',
+      'projetos.ninho.skill4': 'Optimización de rutas',
+      'projetos.ninho.skill5': 'Segmentación RFM',
+      'projetos.ninho.skill6': 'Producto de punta a punta',
 
       'certificados.eyebrow': 'Certificados',
       'certificados.title': 'Formación continua en datos, IA y negocios.',
