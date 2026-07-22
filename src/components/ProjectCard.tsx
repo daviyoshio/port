@@ -3,8 +3,10 @@ import { useI18n } from "../i18n/LanguageContext";
 import type { ProjectCopy } from "../i18n/content";
 import { Tag } from "./ui/Tag";
 
+// h-full: sem isso o card nao preenche a celula da grade, e o vizinho de texto
+// mais curto fica com a base desalinhada em relacao ao mais alto da linha.
 const cardClasses =
-  "group flex flex-col overflow-hidden rounded-panel border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift";
+  "group flex h-full flex-col overflow-hidden rounded-panel border border-hairline bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift";
 
 export function ProjectCard({
   meta,
@@ -43,7 +45,11 @@ export function ProjectCard({
           {copy.description}
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul
+          className={`mt-5 flex flex-wrap gap-2${
+            links.length > 0 ? " mb-6" : ""
+          }`}
+        >
           {copy.tags.map((tag) => (
             <li key={tag}>
               <Tag>{tag}</Tag>
@@ -52,7 +58,7 @@ export function ProjectCard({
         </ul>
 
         {links.length > 0 && (
-          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-hairline pt-5">
+          <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-hairline pt-5">
             {links.map((l) =>
               links.length === 1 ? (
                 // Whole card is the anchor — render the label as plain text.

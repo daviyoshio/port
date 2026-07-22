@@ -350,6 +350,12 @@ const pt: Dictionary = {
           "Conceito de produto para organização financeira pessoal, transformando complexidade em clareza para o usuário, do problema à proposta de valor.",
         tags: ["Fintech", "Produto Digital", "Finanças", "UX", "Estratégia"],
       },
+      ninho: {
+        kicker: "Projeto 07",
+        description:
+          "Sistema de gestão em produção numa granja de postura real, usado todo dia por quem não é técnico. Cobre produção, estoque de ovos com FIFO por validade, projeção de ração, pedidos e clientes segmentados por RFV, com roteirização de entregas por distância e tempo reais de estrada.",
+        tags: ["Next.js", "Supabase", "PWA", "Roteirização", "RFV", "Produto"],
+      },
     },
     liveLabel: "Ver projeto",
     codeLabel: "Ver código",
@@ -643,6 +649,12 @@ const en: Dictionary = {
           "A product concept for personal financial organization, turning complexity into clarity for the user, from problem to value proposition.",
         tags: ["Fintech", "Digital Product", "Finance", "UX", "Strategy"],
       },
+      ninho: {
+        kicker: "Project 07",
+        description:
+          "A management system running in production at a real laying-hen farm, used daily by non-technical people. It covers production, egg inventory with FIFO by expiry date, feed forecasting, orders and RFM-segmented customers, with delivery routing based on real road distance and time.",
+        tags: ["Next.js", "Supabase", "PWA", "Routing", "RFM", "Product"],
+      },
     },
     liveLabel: "View project",
     codeLabel: "View code",
@@ -935,6 +947,12 @@ const es: Dictionary = {
         description:
           "Concepto de producto para organización financiera personal, transformando complejidad en claridad para el usuario, del problema a la propuesta de valor.",
         tags: ["Fintech", "Producto Digital", "Finanzas", "UX", "Estrategia"],
+      },
+      ninho: {
+        kicker: "Proyecto 07",
+        description:
+          "Sistema de gestión en producción en una granja de postura real, usado a diario por personas sin perfil técnico. Cubre producción, stock de huevos con FIFO por caducidad, proyección de alimento, pedidos y clientes segmentados por RFM, con ruteo de entregas por distancia y tiempo reales de carretera.",
+        tags: ["Next.js", "Supabase", "PWA", "Ruteo", "RFM", "Producto"],
       },
     },
     liveLabel: "Ver proyecto",

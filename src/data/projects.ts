@@ -65,4 +65,12 @@ export const projects: ProjectMeta[] = [
     alt: "Conceito de produto Monevo para organização financeira",
     // deckUrl: "https://...",
   },
+  {
+    id: "ninho",
+    title: "Ninho",
+    image: asset("assets/img/projeto-ninho.webp"),
+    alt: "Painel do Ninho com produção de ovos, ração, pedidos e clientes",
+    // liveUrl: "https://...",
+    // codeUrl: "https://github.com/daviyoshio/ninho",
+  },
 ];
